@@ -1,6 +1,5 @@
 # Solução dos Problemas de Circuitos Elétricos (Parte 2)
 
-A seguir, apresentamos as soluções detalhadas para os problemas de circuito 2.3, 2.5, 2.6, 2.7, 2.8, 2.9 e 2.10, conforme solicitado nas imagens fornecidas.
 
 ## Problema 2.3
 
