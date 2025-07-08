@@ -1,6 +1,6 @@
 Para resolver este problema, vou usar as leis de Kirchhoff e a Lei de Ohm.
 
-#Problema 2.18: Dado o circuito mostrado na Figura P2.18, determine:
+# Problema 2.18: Dado o circuito mostrado na Figura P2.18, determine:
 a) o valor de $i_a$
 b) o valor de $i_b$
 c) o valor de $v_o$
