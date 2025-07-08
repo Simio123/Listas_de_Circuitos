@@ -823,3 +823,439 @@ Como $P_{total\_fornecida} \approx 1.4167 W$ e $P_{total\_absorvida\_resistores}
 **Respostas Finais:**
 *   $v_o = 15 V$
 *   A potência total absorvida no circuito (pelos resistores) é $\frac{17}{12} W \approx 1.4167 W$.
+
+
+#Problema 2.34:
+a) Determine $i_o$.
+b) Verifique o valor de $i_o$, mostrando que a potência gerada no circuito é igual à potência absorvida no circuito.
+
+**Solução:**
+
+Vamos seguir os passos fornecidos e depois verificar o balanço de potência.
+
+**a) Determine $i_o$.**
+
+O circuito pode ser analisado como duas malhas independentes, pois a fonte de corrente de 10 mA está em um ramo que não compartilha diretamente um resistor com a segunda malha, e a tensão $v_1$ é a única ligação entre elas.
+
+**Malha 1 (lado esquerdo):**
+A fonte de corrente de 10 mA está em paralelo com o resistor de 4 kΩ. A tensão $v_1$ é a tensão sobre o resistor de 4 kΩ.
+Usando a Lei de Ohm:
+$v_1 = (10 mA) \times (4 k\Omega)$
+$v_1 = (10 \times 10^{-3} A) \times (4 \times 10^3 \Omega)$
+$v_1 = 40 V$
+
+Este cálculo está correto e coincide com o seu material.
+
+**Malha 2 (lado direito):**
+A fonte de tensão dependente é $\frac{v_1}{2}$.
+$v_x = \frac{v_1}{2}$
+$v_x = \frac{40 V}{2}$
+$v_x = 20 V$
+
+Este cálculo também está correto e coincide com o seu material.
+
+Agora, para encontrar $i_o$, que é a corrente que flui através dos resistores de 2 kΩ e 6 kΩ. Estes dois resistores estão em série na malha direita. A fonte de tensão dependente $v_x$ está em série com eles.
+A corrente $i_o$ é a corrente total que flui através dessa série de resistores.
+$i_o = \frac{v_x}{2 k\Omega + 6 k\Omega}$
+$i_o = \frac{20 V}{8 k\Omega}$
+$i_o = \frac{20 V}{8 \times 10^3 \Omega}$
+$i_o = 2.5 \times 10^{-3} A = 2.5 mA$
+
+Este cálculo está correto e coincide com o seu material.
+
+**b) Verifique o valor de $i_o$, mostrando que a potência gerada no circuito é igual à potência absorvida no circuito.**
+
+Vamos calcular a potência para cada elemento:
+
+*   **Potência absorvida pelo resistor de 4 kΩ ($P_{4k\Omega}$):**
+    $P_{4k\Omega} = \frac{v_1^2}{4 k\Omega} = \frac{(40 V)^2}{4000 \Omega} = \frac{1600}{4000} = 0.4 W$
+
+*   **Potência absorvida pelo resistor de 2 kΩ ($P_{2k\Omega}$):**
+    $P_{2k\Omega} = i_o^2 \times 2 k\Omega = (2.5 \times 10^{-3} A)^2 \times (2 \times 10^3 \Omega)$
+    $P_{2k\Omega} = (6.25 \times 10^{-6}) \times (2 \times 10^3) = 0.0125 W$
+
+*   **Potência absorvida pelo resistor de 6 kΩ ($P_{6k\Omega}$):**
+    $P_{6k\Omega} = i_o^2 \times 6 k\Omega = (2.5 \times 10^{-3} A)^2 \times (6 \times 10^3 \Omega)$
+    $P_{6k\Omega} = (6.25 \times 10^{-6}) \times (6 \times 10^3) = 0.0375 W$
+
+*   **Potência gerada/absorvida pela fonte de corrente de 10 mA ($P_{10mA}$):**
+    A tensão sobre a fonte de corrente é $v_1 = 40 V$. A corrente de 10 mA está saindo do terminal positivo da fonte. Portanto, a fonte está **gerando** potência.
+    $P_{10mA} = V \times I = 40 V \times 10 mA = 40 V \times 10 \times 10^{-3} A = 0.4 W$ (gerada)
+
+*   **Potência gerada/absorvida pela fonte de tensão dependente ($P_{dependente}$):**
+    A tensão da fonte é $v_x = 20 V$. A corrente $i_o = 2.5 mA$ está saindo do terminal positivo da fonte de tensão dependente. Portanto, a fonte está **gerando** potência.
+    $P_{dependente} = V \times I = 20 V \times 2.5 mA = 20 V \times 2.5 \times 10^{-3} A = 0.05 W$ (gerada)
+
+**Potência Total Gerada:**
+$P_{total\_gerada} = P_{10mA} + P_{dependente} = 0.4 W + 0.05 W = 0.45 W$
+
+**Potência Total Absorvida:**
+$P_{total\_absorvida} = P_{4k\Omega} + P_{2k\Omega} + P_{6k\Omega} = 0.4 W + 0.0125 W + 0.0375 W = 0.45 W$
+
+Como $P_{total\_gerada} = P_{total\_absorvida} = 0.45 W$, o balanço de potência está verificado.
+
+**Respostas:**
+a) $i_o = 2.5 mA$
+b) A potência gerada no circuito (0.45 W) é igual à potência absorvida no circuito (0.45 W).
+
+
+
+#Problema 2.35:
+
+**Solução:**
+
+Vamos seguir os passos fornecidos e determinar as correntes solicitadas.
+
+**a) Determine $i_o$.**
+
+O problema afirma que o circuito é distribuído de forma que, se houver apenas um fio ligando duas malhas, a corrente que flui por esse fio é 0. No diagrama, $i_o$ é a corrente no fio que conecta a malha da esquerda com a malha da direita.
+
+Primeiro, vamos calcular $v_\Delta$ e $i_x$ conforme o seu material.
+
+**Cálculo de $v_\Delta$ (Malha 1 - lado esquerdo):**
+A tensão $v_\Delta$ é a tensão sobre o resistor de 6 Ω. A fonte de 18 V está em série com os resistores de 12 Ω e 6 Ω. Podemos usar o divisor de tensão.
+$v_\Delta = 18 V \times \frac{6 \Omega}{12 \Omega + 6 \Omega}$
+$v_\Delta = 18 V \times \frac{6 \Omega}{18 \Omega}$
+$v_\Delta = 18 V \times \frac{1}{3}$
+$v_\Delta = 6 V$
+
+Este cálculo está correto e coincide com o seu material.
+
+**Cálculo de $i_x$ (Fonte de corrente dependente):**
+A fonte de corrente dependente é $\frac{v_\Delta}{2}$.
+$i_x = \frac{v_\Delta}{2}$
+$i_x = \frac{6 V}{2}$
+$i_x = 3 A$
+
+Este cálculo também está correto e coincide com o seu material.
+
+Agora, para determinar $i_o$, podemos usar a Análise Nodal. Vamos definir o nó inferior como referência (0 V).
+Nó superior esquerdo (entre 12Ω e 6Ω): $V_A$
+Nó superior direito (entre 6Ω, fonte dependente, 10Ω e 5Ω): $V_B$
+
+A tensão $v_\Delta$ é a tensão no nó $V_A$ em relação ao nó de referência, então $V_A = v_\Delta = 6V$.
+
+Aplicando a Lei das Correntes de Kirchhoff (LCK) no nó $V_A$:
+A corrente que flui para baixo através do resistor de 6 Ω é $\frac{V_A}{6}$.
+A corrente que flui para a direita através do ramo de $i_o$ é $i_o$.
+A corrente que entra no nó $V_A$ vinda da fonte de 18V e do resistor de 12Ω é $\frac{18 - V_A}{12}$.
+
+LCK no Nó $V_A$:
+$\frac{18 - V_A}{12} = \frac{V_A}{6} + i_o$
+Substituindo $V_A = 6V$:
+$\frac{18 - 6}{12} = \frac{6}{6} + i_o$
+$\frac{12}{12} = 1 + i_o$
+$1 = 1 + i_o$
+$i_o = 0 A$
+
+Isso confirma a afirmação do seu material de que $i_o = 0 A$.
+
+**b) Determine $i_1$.**
+
+A corrente $i_1$ flui através do resistor de 10 Ω. A fonte de corrente dependente $i_x = 3 A$ está em paralelo com os resistores de 10 Ω e 5 Ω.
+A corrente $i_1$ é a corrente que flui para baixo através do resistor de 10 Ω.
+Podemos usar o divisor de corrente para encontrar $i_1$. A corrente total que entra no paralelo é $i_x = 3 A$.
+$i_1 = i_x \times \frac{R_{outro}}{R_{total\_paralelo}}$
+$i_1 = 3 A \times \frac{5 \Omega}{10 \Omega + 5 \Omega}$
+$i_1 = 3 A \times \frac{5 \Omega}{15 \Omega}$
+$i_1 = 3 A \times \frac{1}{3}$
+$i_1 = 1 A$
+
+**c) Determine $i_2$.**
+
+A corrente $i_2$ flui através do resistor de 5 Ω.
+Podemos usar o divisor de corrente para encontrar $i_2$.
+$i_2 = i_x \times \frac{R_{outro}}{R_{total\_paralelo}}$
+$i_2 = 3 A \times \frac{10 \Omega}{10 \Omega + 5 \Omega}$
+$i_2 = 3 A \times \frac{10 \Omega}{15 \Omega}$
+$i_2 = 3 A \times \frac{2}{3}$
+$i_2 = 2 A$
+
+**Verificação:**
+$i_x = i_1 + i_2 = 1 A + 2 A = 3 A$. Isso está correto.
+
+**Respostas:**
+a) $i_o = 0 A$
+b) $i_1 = 1 A$
+c) $i_2 = 2 A$
+
+
+# Problema P2.36
+![lupi](https://github.com/user-attachments/assets/4e8ffd12-806e-4637-af68-1c44e1d1d1a0)
+
+
+**Passo 1: Aplicando a lei de Kirchhoff para o primeiro Loop**
+
+$-50 - 20i_b + 18i_\Delta = 0$
+
+$18i_\Delta - 20i_\sigma - 50 = 0$ (1)
+
+**Já para o segundo Loop**
+
+$-18i_\Delta + 5i_\sigma + 40i_\sigma = 0$
+
+$-18i_\Delta + 45i_\sigma = 0$ (2)
+
+**Resolvendo as equações**
+
+$i_\sigma = 2A$
+
+$i_\Delta = 5A$
+
+$v_0 = 40i_\sigma$
+
+$v_0 = 40(2)$
+
+$v_0 = 80V$
+
+**Passo 2: Lei de Kirchhoff para Loop 3:**
+
+$-20 + v_1 + v_0 = 0$
+
+$-20 + v_1 + 80 = 0$
+
+$v_1 = -60V$
+
+**Agora a Lei do nó Kirchhoff no nó a:**
+
+$i_1 - i_\sigma - 8i_\Delta = 0$
+
+$i_1 - 2 - 8(5) = 0$
+
+$i_1 = 42A$
+
+**Novamente a Lei de Kirchhoff, agora aplicada ao nó b:**
+
+$i_2 - i_\Delta - i_1 = 0$
+
+$i_2 - 5 - 42 = 0$
+
+$i_2 = 47A$
+
+**Agora que finalmente encontramos as correntes, podemos finalmente encontrar as potências.**
+Para fontes de tensão a potência é dada por $P = U I$, e para os resistores é $P = RI^2$
+Então vamos:
+
+$P_{50V} = -50(i_2) = -50(47) = -2350W$
+
+$P_{20} = -20i_2 = -20(47) = -1880W$
+
+$P_5 = 5i_\sigma i_1 = 5(2)(42) = 420W$
+
+$P_8 = -v_1(8i_\Delta) = -(-60)(8)(5) = 2400W$
+
+$P_{20} = 20(8i_\Delta) = 20(8)(5) = 800W$
+
+$P_{18} = i_\Delta^2 18 = 5^2(18) = 450W$
+
+$P_{40} = i_\sigma v_0 = 2(80) = 160W$
+
+$P_{developed} = P_{50} + P_{20} = -2350 - 1880 = -4230 W$
+
+$P_{absorbed} = P_5 + P_8 + P_{20} + P_{18} + P_{40}$
+
+$= 420 + 2400 + 800 + 450 + 160$
+
+$= 4230 W$
+
+Obrigado pelas imagens do circuito e pelos cálculos para o Problema 2.37!
+
+#Problema 2.37:
+
+Vamos definir as correntes de malha no sentido horário:
+*   Malha 1 (esquerda): $I_1$
+*   Malha 2 (centro): $I_2$
+*   Malha 3 (direita): $I_3$
+
+**Relações com as variáveis do problema:**
+*   $v_g = 147 V$ (conforme o diagrama, não 5V como na sua transcrição, que parece ser um erro de digitação ou um valor de exemplo). Vou usar 147V.
+*   $v_1$ é a tensão no resistor de 1 Ω, então $v_1 = 1 \Omega \times I_1 = I_1$.
+*   $v_o$ é a tensão no resistor de 10 Ω, então $v_o = 10 \Omega \times I_3$.
+*   $i_1$ é a corrente no resistor de 20 Ω, então $i_1 = I_2$.
+*   $i_2$ é a corrente no resistor de 10 Ω, então $i_2 = I_3$.
+
+**Equações da Lei de Kirchhoff das Tensões (LKT):**
+
+**Malha 1:**
+$-147V + (1 \Omega)I_1 + (2 \Omega)(I_1 - I_2) = 0$
+$3I_1 - 2I_2 = 147$ (Equação A)
+
+**Malha 2:**
+$-(2 \Omega)(I_2 - I_1) + (35 \Omega)(I_2 - I_3) + (20 \Omega)I_2 = 0$
+$2I_1 - 2I_2 + 35I_2 - 35I_3 + 20I_2 = 0$
+$2I_1 + 53I_2 - 35I_3 = 0$ (Equação B)
+
+**Malha 3:**
+$-(35 \Omega)(I_3 - I_2) + (10 \Omega)I_3 - (40 \Omega)i_2 = 0$
+Substituindo $i_2 = I_3$:
+$-35I_3 + 35I_2 + 10I_3 - 40I_3 = 0$
+$35I_2 - 65I_3 = 0$ (Equação C)
+
+**Resolvendo o sistema de equações (A, B, C):**
+
+De (C), podemos expressar $I_2$ em termos de $I_3$:
+$35I_2 = 65I_3 \implies I_2 = \frac{65}{35}I_3 = \frac{13}{7}I_3$
+
+Substituindo $I_2$ na Equação A:
+$3I_1 - 2\left(\frac{13}{7}I_3\right) = 147$
+$3I_1 - \frac{26}{7}I_3 = 147$ (Equação D)
+
+Substituindo $I_2$ na Equação B:
+$2I_1 + 53\left(\frac{13}{7}I_3\right) - 35I_3 = 0$
+$2I_1 + \frac{689}{7}I_3 - \frac{245}{7}I_3 = 0$
+$2I_1 + \frac{444}{7}I_3 = 0$
+$I_1 = -\frac{444}{14}I_3 = -\frac{222}{7}I_3$ (Equação E)
+
+Agora, substituímos $I_1$ da Equação E na Equação D:
+$3\left(-\frac{222}{7}I_3\right) - \frac{26}{7}I_3 = 147$
+$-\frac{666}{7}I_3 - \frac{26}{7}I_3 = 147$
+$-\frac{692}{7}I_3 = 147$
+$I_3 = -\frac{147 \times 7}{692} = -\frac{1029}{692} \approx -1.48699 A$
+
+Agora, calculamos $I_2$ e $I_1$:
+$I_2 = \frac{13}{7}I_3 = \frac{13}{7} \times \left(-\frac{1029}{692}\right) = -\frac{13 \times 147}{692} = -\frac{1911}{692} \approx -2.76156 A$
+$I_1 = -\frac{222}{7}I_3 = -\frac{222}{7} \times \left(-\frac{1029}{692}\right) = \frac{222 \times 147}{692} = \frac{32634}{692} \approx 47.15896 A$
+
+**Determinando $v_1$ e $v_o$:**
+$v_1 = I_1 \approx 47.159 V$
+$v_o = 10 \Omega \times I_3 = 10 \Omega \times (-1.48699 A) \approx -14.870 V$
+
+**Respostas:**
+$v_1 \approx 47.16 V$
+$v_o \approx -14.87 V$
+
+
+Problema 2.38:
+
+**Equações Iniciais :**
+
+1.  $i_B + i_2 - i_1 = 0$
+2.  $i_E - i_B - i_C = 0$
+3.  $i_C = \beta i_B$
+4.  $V_0 + i_E R_E - i_2 R_2 = 0$
+5.  $-i_1 R_1 + V_{CC} - i_2 R_2 = 0$
+
+**Passo 1: Utilizar (3) na (2) para expressar $i_E$ em função de $i_B$.**
+
+Substitua $i_C = \beta i_B$ (Equação 3) na Equação 2 ($i_E - i_B - i_C = 0$):
+$i_E - i_B - (\beta i_B) = 0$
+$i_E = i_B + \beta i_B$
+$i_E = i_B (1 + \beta)$
+
+**Passo 2: Utilizar (1) para encontrar $i_2$ e então substituir em (4) e (5).**
+
+Da Equação 1 ($i_B + i_2 - i_1 = 0$), isolamos $i_2$:
+$i_2 = i_1 - i_B$
+
+Agora, substituímos $i_2 = i_1 - i_B$ na Equação 4 ($V_0 + i_E R_E - i_2 R_2 = 0$):
+$V_0 + i_E R_E - (i_1 - i_B) R_2 = 0$
+$V_0 + i_E R_E - i_1 R_2 + i_B R_2 = 0$
+
+Agora, substituímos $i_2 = i_1 - i_B$ na Equação 5 ($-i_1 R_1 + V_{CC} - i_2 R_2 = 0$):
+$-i_1 R_1 + V_{CC} - (i_1 - i_B) R_2 = 0$
+$-i_1 R_1 + V_{CC} - i_1 R_2 + i_B R_2 = 0$
+$-i_1 (R_1 + R_2) + V_{CC} + i_B R_2 = 0$
+
+Do resultado acima, isolamos $i_1$:
+$i_1 (R_1 + R_2) = V_{CC} + i_B R_2$
+$i_1 = \frac{V_{CC} + i_B R_2}{R_1 + R_2}$
+
+
+**Próximos passos (para deduzir a Equação 2.25):**
+
+1.  Substituir $i_E = i_B (1 + \beta)$ e $i_1 = \frac{V_{CC} + i_B R_2}{R_1 + R_2}$ na equação $V_0 + i_E R_E - i_1 R_2 + i_B R_2 = 0$.
+2.  Rearranjar a equação resultante para isolar $i_B$.
+
+Substituindo:
+$V_0 + i_B (1 + \beta) R_E - \left(\frac{V_{CC} + i_B R_2}{R_1 + R_2}\right) R_2 + i_B R_2 = 0$
+
+Distribuindo $R_2$ e separando os termos:
+$V_0 + i_B (1 + \beta) R_E - \frac{V_{CC} R_2}{R_1 + R_2} - \frac{i_B R_2^2}{R_1 + R_2} + i_B R_2 = 0$
+
+Agrupando os termos com $i_B$ no lado esquerdo e os termos sem $i_B$ no lado direito:
+$i_B (1 + \beta) R_E - \frac{i_B R_2^2}{R_1 + R_2} + i_B R_2 = \frac{V_{CC} R_2}{R_1 + R_2} - V_0$
+
+Fatorando $i_B$ do lado esquerdo:
+$i_B \left[ (1 + \beta) R_E - \frac{R_2^2}{R_1 + R_2} + R_2 \right] = \frac{V_{CC} R_2}{R_1 + R_2} - V_0$
+
+Simplificando o termo dentro dos colchetes:
+$(1 + \beta) R_E + R_2 - \frac{R_2^2}{R_1 + R_2}$
+$= (1 + \beta) R_E + \frac{R_2(R_1 + R_2) - R_2^2}{R_1 + R_2}$
+$= (1 + \beta) R_E + \frac{R_1 R_2 + R_2^2 - R_2^2}{R_1 + R_2}$
+$= (1 + \beta) R_E + \frac{R_1 R_2}{R_1 + R_2}$
+
+Substituindo de volta na equação:
+$i_B \left[ (1 + \beta) R_E + \frac{R_1 R_2}{R_1 + R_2} \right] = \frac{V_{CC} R_2}{R_1 + R_2} - V_0$
+
+Finalmente, isolando $i_B$:
+$i_B = \frac{\frac{V_{CC} R_2}{R_1 + R_2} - V_0}{(1 + \beta) R_E + \frac{R_1 R_2}{R_1 + R_2}}$
+
+Obrigado pelas imagens do circuito e pelos cálculos para o Problema 2.39!
+
+#Problema 2.39:
+
+**Valores dos Componentes:**
+*   $R_1 = 40 k\Omega = 40000 \Omega$
+*   $R_2 = 60 k\Omega = 60000 \Omega$
+*   $R_C = 750 \Omega$
+*   $R_E = 120 \Omega$
+*   $V_{CC} = 10 V$
+*   $V_0 = 600 mV = 0.6 V$
+*   $\beta = 49$
+
+**Relações Importantes (do Exemplo 2.11 e Problema 2.38):**
+*   $i_C = \beta i_B$
+*   $i_E = i_B (1 + \beta)$
+*   $i_2 = i_1 - i_B$
+*   $i_1 = \frac{V_{CC} + i_B R_2}{R_1 + R_2}$
+*   $i_B = \frac{\frac{V_{CC} R_2}{R_1 + R_2} - V_0}{(1 + \beta) R_E + \frac{R_1 R_2}{R_1 + R_2}}$ (Equação 2.25)
+
+**Passo 1: Calcular $i_B$ usando a Equação 2.25.**
+
+Primeiro, vamos calcular os termos da Equação 2.25:
+*   $\frac{V_{CC} R_2}{R_1 + R_2} = \frac{10 V \times 60000 \Omega}{40000 \Omega + 60000 \Omega} = \frac{600000}{100000} = 6 V$
+*   $\frac{R_1 R_2}{R_1 + R_2} = \frac{40000 \Omega \times 60000 \Omega}{40000 \Omega + 60000 \Omega} = \frac{2.4 \times 10^9}{100000} = 24000 \Omega = 24 k\Omega$
+*   $(1 + \beta) R_E = (1 + 49) \times 120 \Omega = 50 \times 120 \Omega = 6000 \Omega = 6 k\Omega$
+
+Agora, substitua na Equação 2.25:
+$i_B = \frac{6 V - 0.6 V}{6000 \Omega + 24000 \Omega} = \frac{5.4 V}{30000 \Omega}$
+$i_B = 0.00018 A = 0.18 mA$
+
+**Passo 2: Calcular as outras correntes ($i_C, i_E, i_1, i_2, i_{CC}$).**
+
+*   $i_C = \beta i_B = 49 \times 0.18 mA = 8.82 mA$
+*   $i_E = (1 + \beta) i_B = 50 \times 0.18 mA = 9 mA$
+*   $i_1 = \frac{V_{CC} + i_B R_2}{R_1 + R_2} = \frac{10 V + (0.18 \times 10^{-3} A \times 60000 \Omega)}{40000 \Omega + 60000 \Omega} = \frac{10 V + 10.8 V}{100000 \Omega} = \frac{20.8 V}{100000 \Omega}$
+    $i_1 = 0.000208 A = 0.208 mA$
+*   $i_2 = i_1 - i_B = 0.208 mA - 0.18 mA = 0.028 mA$
+*   $i_{CC}$ (corrente na fonte $V_{CC}$)
+    Da Equação (1) do Exemplo 2.11: $i_1 + i_C - i_{CC} = 0 \implies i_{CC} = i_1 + i_C$
+    $i_{CC} = 0.208 mA + 8.82 mA = 9.028 mA$
+
+**Passo 3: Calcular as tensões ($v_{3d}, v_{bd}, v_{ab}, v_{13}$).**
+
+*   $v_{3d}$ (tensão no resistor $R_E$)
+    $v_{3d} = i_E R_E = 9 mA \times 120 \Omega = 9 \times 10^{-3} A \times 120 \Omega = 1.08 V$
+    (A Figura P2.39 mostra $v_{3d}$ como a tensão sobre $R_E$, com o terminal 3 positivo em relação a d.)
+
+*   $v_{bd}$ (tensão entre o nó b e o nó d)
+    $v_{bd} = i_2 R_2 = 0.028 mA \times 60000 \Omega = 0.028 \times 10^{-3} A \times 60000 \Omega = 1.68 V$
+
+*   $v_{ab}$ (tensão entre o nó a e o nó b)
+    $v_{ab} = i_1 R_1 = 0.208 mA \times 40000 \Omega = 0.208 \times 10^{-3} A \times 40000 \Omega = 8.32 V$
+
+*   $v_{13}$ (tensão entre o nó 1 e o nó 3)
+    $v_{13}$ é a tensão sobre o resistor $R_C$.
+    $v_{13} = i_C R_C = 8.82 mA \times 750 \Omega = 8.82 \times 10^{-3} A \times 750 \Omega = 6.615 V$
+
+**Respostas Finais:**
+*   $i_B = 0.18 mA$
+*   $i_C = 8.82 mA$
+*   $i_E = 9 mA$
+*   $i_1 = 0.208 mA$
+*   $i_2 = 0.028 mA$
+*   $i_{CC} = 9.028 mA$
+*   $v_{3d} = 1.08 V$
+*   $v_{bd} = 1.68 V$
+*   $v_{ab} = 8.32 V$
+*   $v_{13} = 6.615 V$
