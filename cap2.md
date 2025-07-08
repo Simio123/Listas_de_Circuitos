@@ -1,6 +1,6 @@
 Para resolver este problema, vou usar as leis de Kirchhoff e a Lei de Ohm.
 
-**Problema 2.18:** Dado o circuito mostrado na Figura P2.18, determine:
+*Problema 2.18:** Dado o circuito mostrado na Figura P2.18, determine:
 a) o valor de $i_a$
 b) o valor de $i_b$
 c) o valor de $v_o$
@@ -79,7 +79,7 @@ e) $P_{fonte} = 125 W$
 
 
 
-**Problema 2.23:** O resistor variável R no circuito da Figura P2.23 é ajustado até que $i_o$ seja igual a 10 mA. Determine o valor de R.
+*Problema 2.23:** O resistor variável R no circuito da Figura P2.23 é ajustado até que $i_o$ seja igual a 10 mA. Determine o valor de R.
 
 **Solução:**
 
@@ -148,3 +148,106 @@ $R = \frac{60 V}{0.03 A} = 2000 \Omega = 2 k\Omega$
 
 **Respostas:**
 O valor de R é $2 k\Omega$.
+
+
+*Problema 2.24:** Para o circuito mostrado na Figura P2.24, determine (a) R e (b) a potência fornecida pela fonte de 240 V.
+
+**Solução usando Análise de Malhas**
+
+**Interpretação das Malhas e Corrente de 4 A:**
+As equações de malha são:
+1.  $(10 + R)i_1 - Ri_2 - 10i_3 = 240$
+2.  $-Ri_1 + (19 + R)i_2 - 4i_3 = 0$
+3.  $-10i_1 - 4i_2 + 34i_3 = 0$
+
+A corrente de 4 A no diagrama está localizada no ramo superior, que contém os resistores de 5 Ω e 10 Ω. Com base na estrutura das equações fornecidas, a corrente $i_2$ é a corrente de malha que passa por esses resistores. Portanto, assumimos que:
+$i_2 = 4 A$
+
+**a) Determine R:**
+
+Substituímos $i_2 = 4 A$ nas três equações:
+
+**Equação 1:**
+$(10 + R)i_1 - R(4) - 10i_3 = 240$
+$(10 + R)i_1 - 10i_3 = 240 + 4R$ (Equação 1')
+
+**Equação 2:**
+$-Ri_1 + (19 + R)(4) - 4i_3 = 0$
+$-Ri_1 + 76 + 4R - 4i_3 = 0$
+$-Ri_1 - 4i_3 = -76 - 4R$ (Equação 2')
+
+**Equação 3:**
+$-10i_1 - 4(4) + 34i_3 = 0$
+$-10i_1 - 16 + 34i_3 = 0$
+$-10i_1 + 34i_3 = 16$ (Equação 3')
+
+Agora, temos um sistema de três equações com duas incógnitas ($i_1, i_3$) e o valor de R a ser determinado.
+
+Da Equação 3', podemos expressar $i_1$ em termos de $i_3$:
+$-10i_1 = 16 - 34i_3$
+$i_1 = \frac{16 - 34i_3}{-10} = \frac{34i_3 - 16}{10} = \frac{17i_3 - 8}{5}$
+
+Substituímos esta expressão para $i_1$ na Equação 1':
+$(10 + R)\left(\frac{17i_3 - 8}{5}\right) - 10i_3 = 240 + 4R$
+Multiplicamos toda a equação por 5 para eliminar o denominador:
+$(10 + R)(17i_3 - 8) - 50i_3 = 5(240 + 4R)$
+$170i_3 - 80 + 17Ri_3 - 8R - 50i_3 = 1200 + 20R$
+Agrupamos os termos com $i_3$:
+$(170 + 17R - 50)i_3 = 1200 + 20R + 80 + 8R$
+$(120 + 17R)i_3 = 1280 + 28R$
+$i_3 = \frac{1280 + 28R}{120 + 17R}$ (Equação 4')
+
+Agora, substituímos a expressão para $i_1$ na Equação 2':
+$-R\left(\frac{17i_3 - 8}{5}\right) - 4i_3 = -76 - 4R$
+Multiplicamos toda a equação por 5 para eliminar o denominador:
+$-R(17i_3 - 8) - 20i_3 = 5(-76 - 4R)$
+$-17Ri_3 + 8R - 20i_3 = -380 - 20R$
+Agrupamos os termos com $i_3$:
+$(-17R - 20)i_3 = -380 - 20R - 8R$
+$(-17R - 20)i_3 = -380 - 28R$
+$(17R + 20)i_3 = 380 + 28R$
+$i_3 = \frac{380 + 28R}{17R + 20}$ (Equação 5')
+
+Agora, igualamos as Equações 4' e 5' para resolver para R:
+$\frac{1280 + 28R}{120 + 17R} = \frac{380 + 28R}{17R + 20}$
+Multiplicamos cruzado:
+$(1280 + 28R)(17R + 20) = (380 + 28R)(120 + 17R)$
+
+Expandimos ambos os lados:
+Lado Esquerdo:
+$1280 \times 17R + 1280 \times 20 + 28R \times 17R + 28R \times 20$
+$21760R + 25600 + 476R^2 + 560R$
+$476R^2 + 22320R + 25600$
+
+Lado Direito:
+$380 \times 120 + 380 \times 17R + 28R \times 120 + 28R \times 17R$
+$45600 + 6460R + 3360R + 476R^2$
+$476R^2 + 9820R + 45600$
+
+Igualamos os lados:
+$476R^2 + 22320R + 25600 = 476R^2 + 9820R + 45600$
+
+Os termos $476R^2$ se cancelam:
+$22320R + 25600 = 9820R + 45600$
+$22320R - 9820R = 45600 - 25600$
+$12500R = 20000$
+$R = \frac{20000}{12500} = \frac{200}{125} = \frac{8}{5}$
+$R = 1.6 \Omega$
+
+**b) Potência fornecida pela fonte de 240 V:**
+
+Para calcular a potência fornecida pela fonte, precisamos da corrente $i_1$.
+Com $R = 1.6 \Omega$, calculamos $i_3$ usando a Equação 5':
+$i_3 = \frac{380 + 28(1.6)}{17(1.6) + 20} = \frac{380 + 44.8}{27.2 + 20} = \frac{424.8}{47.2} = 9 A$
+
+Agora, calculamos $i_1$ usando a expressão $i_1 = \frac{17i_3 - 8}{5}$:
+$i_1 = \frac{17(9) - 8}{5} = \frac{153 - 8}{5} = \frac{145}{5} = 29 A$
+
+A corrente que sai da fonte de 240 V é $i_1$.
+$P_{fonte} = V_{fonte} \times i_1 = 240 V \times 29 A = 6960 W$
+
+**Respostas:**
+a) $R = 1.6 \Omega$
+b) $P_{fonte} = 6960 W$
+
+
