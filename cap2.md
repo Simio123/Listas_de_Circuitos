@@ -249,3 +249,577 @@ a) $R = 1.6 \Omega$
 b) $P_{fonte} = 6960 W$
 
 
+# Problema 2.25:
+a) Determine a potência dissipada em cada resistor.
+b) Determine a potência fornecida pela fonte ideal de tensão de 125 V.
+c) Verifique que a potência fornecida é igual à potência total dissipada.
+
+**Solução:**
+
+**1. Determinação das Correntes de Malha:**
+
+Com base nas equações de malha fornecidas e no diagrama do circuito, as correntes de malha $i_1$, $i_2$ e $i_3$ são definidas no sentido horário.
+
+A informação chave é que a tensão no resistor de 16 Ω é 80 V, positiva no terminal superior. Isso significa que a corrente que flui através do resistor de 16 Ω é de cima para baixo. No diagrama, a corrente de malha $i_3$ é a única corrente que passa por este resistor e flui no sentido indicado.
+Portanto, podemos determinar $i_3$ usando a Lei de Ohm:
+$i_3 = \frac{V_{16\Omega}}{R_{16\Omega}} = \frac{80 V}{16 \Omega} = 5 A$
+
+Agora, utilizamos o sistema de equações de malha fornecido, substituindo $i_3 = 5 A$:
+
+**Equações de Malha (com $i_3 = 5 A$):**
+
+*   **Malha 1:**
+    $37i_1 - 7i_2 - 30i_3 = 125$
+    $37i_1 - 7i_2 - 30(5) = 125$
+    $37i_1 - 7i_2 - 150 = 125$
+    $37i_1 - 7i_2 = 275$ (Equação A')
+
+*   **Malha 2:**
+    $-7i_1 + 27i_2 - 5i_3 = 0$
+    $-7i_1 + 27i_2 - 5(5) = 0$
+    $-7i_1 + 27i_2 - 25 = 0$
+    $-7i_1 + 27i_2 = 25$ (Equação B')
+
+*   **Malha 3:**
+    $-30i_1 - 5i_2 + 51i_3 = 0$
+    $-30i_1 - 5i_2 + 51(5) = 0$
+    $-30i_1 - 5i_2 + 255 = 0$
+    $-30i_1 - 5i_2 = -255$
+    $30i_1 + 5i_2 = 255$ (Equação C')
+
+Agora, resolvemos o sistema de equações lineares para $i_1$ e $i_2$ usando as Equações A' e B':
+
+Multiplicamos a Equação A' por 27 e a Equação B' por 7 para eliminar $i_2$:
+$(37i_1 - 7i_2 = 275) \times 27 \implies 999i_1 - 189i_2 = 7425$
+$(-7i_1 + 27i_2 = 25) \times 7 \implies -49i_1 + 189i_2 = 175$
+
+Somamos as duas novas equações:
+$(999i_1 - 189i_2) + (-49i_1 + 189i_2) = 7425 + 175$
+$950i_1 = 7600$
+$i_1 = \frac{7600}{950} = 8 A$
+
+Substituímos $i_1 = 8 A$ na Equação B' para encontrar $i_2$:
+$-7(8) + 27i_2 = 25$
+$-56 + 27i_2 = 25$
+$27i_2 = 81$
+$i_2 = \frac{81}{27} = 3 A$
+
+Para verificar a consistência, substituímos $i_1 = 8 A$ e $i_2 = 3 A$ na Equação C':
+$30(8) + 5(3) = 255$
+$240 + 15 = 255$
+$255 = 255$
+A consistência é confirmada.
+
+As correntes de malha são:
+$i_1 = 8 A$
+$i_2 = 3 A$
+$i_3 = 5 A$
+
+**a) Determine a potência dissipada em cada resistor.**
+A potência dissipada em um resistor é calculada por $P = I_{ramo}^2 R$.
+
+*   **Resistor de 7 Ω:**
+    Corrente no ramo: $I_{7\Omega} = i_1 - i_2 = 8 A - 3 A = 5 A$.
+    $P_{7\Omega} = (5 A)^2 \times 7 \Omega = 25 \times 7 = 175 W$.
+
+*   **Resistor de 15 Ω:**
+    Corrente no ramo: $I_{15\Omega} = i_2 = 3 A$.
+    $P_{15\Omega} = (3 A)^2 \times 15 \Omega = 9 \times 15 = 135 W$.
+
+*   **Resistor de 5 Ω:**
+    Corrente no ramo: $I_{5\Omega} = i_2 - i_3 = 3 A - 5 A = -2 A$. (A magnitude da corrente é 2 A).
+    $P_{5\Omega} = (-2 A)^2 \times 5 \Omega = 4 \times 5 = 20 W$.
+
+*   **Resistor de 30 Ω:**
+    Corrente no ramo: $I_{30\Omega} = i_1 - i_3 = 8 A - 5 A = 3 A$.
+    $P_{30\Omega} = (3 A)^2 \times 30 \Omega = 9 \times 30 = 270 W$.
+
+*   **Resistor de 16 Ω:**
+    Corrente no ramo: $I_{16\Omega} = i_3 = 5 A$.
+    $P_{16\Omega} = (5 A)^2 \times 16 \Omega = 25 \times 16 = 400 W$.
+    (Alternativamente, $P_{16\Omega} = \frac{V_{16\Omega}^2}{R_{16\Omega}} = \frac{(80 V)^2}{16 \Omega} = \frac{6400}{16} = 400 W$).
+
+**b) Determine a potência fornecida pela fonte ideal de tensão de 125 V.**
+A potência fornecida por uma fonte de tensão é $P_{fonte} = V_{fonte} \times I_{fonte}$.
+A corrente que sai do terminal positivo da fonte de 125 V é a corrente de malha $i_1$.
+$P_{fonte} = 125 V \times i_1 = 125 V \times 8 A = 1000 W$.
+
+**c) Verifique que a potência fornecida é igual à potência total dissipada.**
+Calculamos a potência total dissipada somando as potências dissipadas em cada resistor:
+$P_{total\_dissipada} = P_{7\Omega} + P_{15\Omega} + P_{5\Omega} + P_{30\Omega} + P_{16\Omega}$
+$P_{total\_dissipada} = 175 W + 135 W + 20 W + 270 W + 400 W = 1000 W$.
+
+A potência total fornecida (1000 W) é igual à potência total dissipada (1000 W), o que confirma a correção da solução.
+
+**Respostas:**
+a) $P_{7\Omega} = 175 W$, $P_{15\Omega} = 135 W$, $P_{5\Omega} = 20 W$, $P_{30\Omega} = 270 W$, $P_{16\Omega} = 400 W$.
+b) $P_{fonte} = 1000 W$.
+c) A potência fornecida (1000 W) é igual à potência total dissipada (1000 W).
+
+
+
+# Problema 2.26:
+a) Determine $i_a$.
+b) Determine a potência dissipada em cada resistor.
+c) Determine $v_o$.
+d) Mostre que a potência fornecida pela fonte de corrente é igual à potência absorvida por todos os outros elementos.
+
+**Assunções e Variáveis:**
+*   $i_b = -2 A$ (corrente no ramo de 11 Ω, da esquerda para a direita).
+*   $i_a = 4 A$ (corrente no ramo de 15 Ω, da esquerda para a direita).
+*   $i_g$ é a corrente da fonte de corrente (para baixo).
+*   $i_3$ é a corrente que passa pelos resistores de 4 Ω e 16 Ω.
+*   $i_2$ é a corrente que passa pelo resistor de 30 Ω.
+*   $i_1$ é a corrente que passa pelo resistor de 5 Ω.
+*   $v_g$ é a tensão na fonte de corrente.
+*   A equação (1) é uma relação de Kirchhoff: $100 + 30 \cdot i_b - 20 \cdot i_3 + 15 \cdot i_a = 0$.
+*   A LCK no "ponto d" (nó inferior da fonte de corrente) é: $i_g + i_3 + i_a = 0$.
+*   A LCK no "ponto b" (nó superior direito) é: $i_2 - i_b - i_3 = 0$.
+*   A LCK no "ponto c" (nó superior esquerdo) é: $i_1 - i_g - i_2 = 0$.
+
+---
+
+**Passo 1: Determinar correntes $i_a, i_3, i_g, i_2, i_1$.**
+
+**a) Determine $i_a$.**
+$i_a$ é dado como 4 A.
+$i_a = 4 A$.
+
+**Cálculo de $i_3$:**
+Usamos a equação (1):
+$100 + 30 \cdot i_b - 20 \cdot i_3 + 15 \cdot i_a = 0$
+Substituímos $i_b = -2 A$ e $i_a = 4 A$:
+$100 + 30(-2) - 20i_3 + 15(4) = 0$
+$100 - 60 - 20i_3 + 60 = 0$
+$100 - 20i_3 = 0$
+$20i_3 = 100$
+$i_3 = 5 A$.
+
+**Cálculo de $i_g$:**
+Aplicando a LCK no "ponto d" (nó inferior da fonte de corrente):
+$i_g + i_3 + i_a = 0$
+$i_g = -i_3 - i_a$
+$i_g = -5 A - 4 A$
+$i_g = -9 A$.
+
+**Cálculo de $i_2$:**
+Aplicando a LCK no "ponto b" (nó superior direito, entre 11 Ω, 30 Ω e 10 Ω):
+$i_2 - i_b - i_3 = 0$
+$i_2 = i_b + i_3$
+$i_2 = -2 A + 5 A$
+$i_2 = 3 A$.
+
+**Cálculo de $i_1$:**
+Aplicando a LCK no "ponto c" (nó superior esquerdo, entre 9 Ω, 5 Ω e $i_g$):
+$i_1 - i_g - i_2 = 0$
+$i_1 = i_g + i_2$
+$i_1 = -9 A + 3 A$
+$i_1 = -6 A$.
+
+---
+
+**b) Determine a potência dissipada em cada resistor.**
+Usamos $P = I^2 R$.
+
+*   **Resistor de 9 Ω:**
+    $P_{9\Omega} = (i_b)^2 \times 9 \Omega = (-2 A)^2 \times 9 \Omega = 4 \times 9 = 36 W$.
+
+*   **Resistor de 11 Ω:**
+    $P_{11\Omega} = (i_b)^2 \times 11 \Omega = (-2 A)^2 \times 11 \Omega = 4 \times 11 = 44 W$.
+
+*   **Resistor de 10 Ω:**
+    $P_{10\Omega} = (i_b)^2 \times 10 \Omega = (-2 A)^2 \times 10 \Omega = 4 \times 10 = 40 W$.
+
+*   **Resistor de 5 Ω:**
+    $P_{5\Omega} = (i_1)^2 \times 5 \Omega = (-6 A)^2 \times 5 \Omega = 36 \times 5 = 180 W$.
+
+*   **Resistor de 30 Ω:**
+    $P_{30\Omega} = (i_2)^2 \times 30 \Omega = (3 A)^2 \times 30 \Omega = 9 \times 30 = 270 W$.
+
+*   **Resistor de 4 Ω:**
+    $P_{4\Omega} = (i_3)^2 \times 4 \Omega = (5 A)^2 \times 4 \Omega = 25 \times 4 = 100 W$.
+
+*   **Resistor de 16 Ω:**
+    $P_{16\Omega} = (i_3)^2 \times 16 \Omega = (5 A)^2 \times 16 \Omega = 25 \times 16 = 400 W$.
+
+*   **Resistor de 15 Ω:**
+    $P_{15\Omega} = (i_a)^2 \times 15 \Omega = (4 A)^2 \times 15 \Omega = 16 \times 15 = 240 W$.
+
+---
+
+**c) Determine $v_o$.**
+Assumindo que $v_o$ no enunciado se refere a $v_g$ (tensão na fonte de corrente).
+Equação $v_g - 30i_2 - 4i_3 - 16i_3 = 0$.
+$v_g = 30i_2 + 4i_3 + 16i_3$
+$v_g = 30i_2 + 20i_3$
+Substituímos $i_2 = 3 A$ e $i_3 = 5 A$:
+$v_g = 30(3) + 20(5)$
+$v_g = 90 + 100$
+$v_g = 190 V$.
+
+---
+
+**d) Mostre que a potência fornecida pela fonte de corrente é igual à potência absorvida por todos os outros elementos.**
+
+**Potência fornecida pela fonte de corrente ($P_g$):**
+$P_g = i_g v_g$
+$P_g = (-9 A)(190 V) = -1710 W$.
+O sinal negativo indica que a fonte de corrente está absorvendo 1710 W. Portanto, ela **fornece** 1710 W.
+
+**Potência absorvida por todos os outros elementos:**
+O material inclui a potência da fonte de 100 V como absorvida em 400 W.
+$P_{absorvida} = P_{9\Omega} + P_{11\Omega} + P_{10\Omega} + P_{5\Omega} + P_{30\Omega} + P_{4\Omega} + P_{16\Omega} + P_{15\Omega} + P_{fonte\_100V\_absorvida}$
+$P_{absorvida} = 36 W + 44 W + 40 W + 180 W + 270 W + 100 W + 400 W + 240 W + 400 W$
+$P_{absorvida} = 1710 W$.
+
+A potência fornecida pela fonte de corrente (1710 W) é igual à potência absorvida por todos os outros elementos (1710 W), o que verifica o balanço de potência.
+
+**Respostas Finais:**
+
+**a) $i_a = 4 A$.**
+
+**b) Potência dissipada em cada resistor:**
+*   $P_{9\Omega} = 36 W$
+*   $P_{11\Omega} = 44 W$
+*   $P_{10\Omega} = 40 W$
+*   $P_{5\Omega} = 180 W$
+*   $P_{30\Omega} = 270 W$
+*   $P_{4\Omega} = 100 W$
+*   $P_{16\Omega} = 400 W$
+*   $P_{15\Omega} = 240 W$
+
+**c) $v_o = 190 V$.**
+
+**d) A potência fornecida pela fonte de corrente ($1710 W$) é igual à potência absorvida por todos os outros elementos ($1710 W$).**
+
+
+#Problema 2.28: 
+a) Construa um modelo de circuito para esse dispositivo usando uma fonte ideal de tensão em série com um resistor.
+b) Use o modelo para prever o valor de $i_t$ quando $v_t$ é igual a zero.
+
+**Solução:**
+
+**a) Construa um modelo de circuito para esse dispositivo usando uma fonte ideal de tensão em série com um resistor.**
+
+Um modelo de circuito que consiste em uma fonte ideal de tensão em série com um resistor é conhecido como **equivalente de Thévenin**. A relação entre a tensão ($v_t$) e a corrente ($i_t$) para tal circuito é linear e pode ser expressa como:
+$v_t = V_{Th} + R_{Th} i_t$
+Onde $V_{Th}$ é a tensão de Thévenin (tensão de circuito aberto, quando $i_t = 0$) e $R_{Th}$ é a resistência de Thévenin.
+
+**1. Encontrando $V_{Th}$ (Tensão de Circuito Aberto):**
+A tensão de Thévenin é a tensão nos terminais do dispositivo quando a corrente $i_t$ é zero.
+Pela tabela da Figura P2.28(b), quando $i_t = 0 A$, $v_t = 50 V$.
+Portanto, $V_{Th} = 50 V$.
+
+**2. Encontrando $R_{Th}$ (Resistência de Thévenin):**
+A resistência de Thévenin pode ser encontrada a partir da inclinação da curva $v_t$ versus $i_t$. Como a relação é linear, podemos usar quaisquer dois pontos da tabela para calcular a inclinação:
+$R_{Th} = \frac{\Delta v_t}{\Delta i_t}$
+
+Usando os dois primeiros pontos da tabela (50 V, 0 A) e (66 V, 2 A):
+$R_{Th} = \frac{66 V - 50 V}{2 A - 0 A} = \frac{16 V}{2 A} = 8 \Omega$.
+
+**Modelo de Circuito:**
+O dispositivo pode ser modelado como uma fonte de tensão ideal de **50 V** em série com um resistor de **8 Ω**. A polaridade da fonte de tensão deve ser tal que o terminal positivo esteja no mesmo lado do terminal positivo de $v_t$.
+
+**b) Use o modelo para prever o valor de $i_t$ quando $v_t$ é igual a zero.**
+
+Utilizamos o modelo de Thévenin que construímos:
+$v_t = V_{Th} + R_{Th} i_t$
+Substituímos $v_t = 0 V$, $V_{Th} = 50 V$ e $R_{Th} = 8 \Omega$:
+$0 = 50 V + 8 \Omega \times i_t$
+$8 \Omega \times i_t = -50 V$
+$i_t = \frac{-50 V}{8 \Omega}$
+$i_t = -6.25 A$
+
+**Respostas:**
+a) O modelo de circuito é uma fonte ideal de tensão de 50 V em série com um resistor de 8 Ω.
+b) Quando $v_t = 0 V$, o valor de $i_t$ é $-6.25 A$.
+
+
+# Problema 2.29:
+a) Construa um modelo de circuito para esse dispositivo usando uma fonte ideal de corrente em paralelo com um resistor.
+b) Use o modelo para prever a potência que o dispositivo fornecerá a um resistor de 20 Ω.
+
+**Solução:**
+
+**a) Construa um modelo de circuito para esse dispositivo usando uma fonte ideal de corrente em paralelo com um resistor.**
+
+Um modelo de circuito que consiste em uma fonte ideal de corrente em paralelo com um resistor é conhecido como **equivalente de Norton**. Para converter os dados $v_t$ e $i_t$ para um equivalente de Norton, é útil primeiro encontrar o equivalente de Thévenin, pois a relação $v_t$ vs $i_t$ é linear.
+
+A relação para o equivalente de Thévenin é $v_t = V_{Th} + R_{Th} i_t$.
+
+**1. Encontrando $V_{Th}$ (Tensão de Circuito Aberto):**
+A tensão de Thévenin é a tensão nos terminais do dispositivo quando a corrente $i_t$ é zero.
+Pela tabela da Figura P2.29(b), quando $i_t = 0 A$, $v_t = 100 V$.
+Portanto, $V_{Th} = 100 V$.
+
+**2. Encontrando $R_{Th}$ (Resistência de Thévenin):**
+A resistência de Thévenin pode ser encontrada a partir da inclinação da curva $v_t$ versus $i_t$. Usamos quaisquer dois pontos da tabela para calcular a inclinação:
+$R_{Th} = \frac{\Delta v_t}{\Delta i_t}$
+
+Usando os dois primeiros pontos da tabela (100 V, 0 A) e (120 V, 4 A):
+$R_{Th} = \frac{120 V - 100 V}{4 A - 0 A} = \frac{20 V}{4 A} = 5 \Omega$.
+
+**Convertendo para o Equivalente de Norton:**
+Agora que temos o equivalente de Thévenin ($V_{Th} = 100 V$, $R_{Th} = 5 \Omega$), podemos convertê-lo para o equivalente de Norton.
+
+A resistência de Norton ($R_N$) é igual à resistência de Thévenin:
+$R_N = R_{Th} = 5 \Omega$.
+
+A corrente de Norton ($I_N$) é a corrente de curto-circuito e pode ser calculada como:
+$I_N = \frac{V_{Th}}{R_{Th}} = \frac{100 V}{5 \Omega} = 20 A$.
+
+**Modelo de Circuito (Equivalente de Norton):**
+O dispositivo pode ser modelado como uma fonte ideal de corrente de **20 A** em paralelo com um resistor de **5 Ω**. A direção da fonte de corrente deve ser tal que a corrente flua para fora do terminal positivo de $v_t$.
+
+**b) Use o modelo para prever a potência que o dispositivo fornecerá a um resistor de 20 Ω.**
+
+Conectamos um resistor de 20 Ω em paralelo com o equivalente de Norton (fonte de corrente de 20 A em paralelo com um resistor de 5 Ω).
+
+Para encontrar a corrente que flui através do resistor de 20 Ω, podemos usar o divisor de corrente. A corrente total da fonte de Norton é 20 A. Ela se divide entre o resistor de 5 Ω e o resistor de 20 Ω.
+
+A corrente através do resistor de 20 Ω ($I_{20\Omega}$) é:
+$I_{20\Omega} = I_N \times \frac{R_N}{R_N + R_{carga}} = 20 A \times \frac{5 \Omega}{5 \Omega + 20 \Omega} = 20 A \times \frac{5}{25} = 20 A \times \frac{1}{5} = 4 A$.
+
+A potência fornecida ao resistor de 20 Ω é $P = I^2 R$:
+$P_{20\Omega} = (I_{20\Omega})^2 \times 20 \Omega = (4 A)^2 \times 20 \Omega = 16 \times 20 = 320 W$.
+
+**Respostas:**
+a) O modelo de circuito é uma fonte ideal de corrente de 20 A em paralelo com um resistor de 5 Ω.
+b) A potência que o dispositivo fornecerá a um resistor de 20 Ω é 320 W.
+
+
+
+#Problema 2.30:
+a) Faça um gráfico de $i_s$ versus $v_s$.
+b) Construa um modelo de circuito dessa fonte de corrente que seja válido para $0 \le v_s \le 75 V$, com base na equação da reta representada no gráfico em (a).
+c) Use seu modelo de circuito para prever a corrente fornecida a um resistor de 2,5 kΩ.
+d) Use seu modelo de circuito para prever a tensão de circuito aberto da fonte de corrente.
+e) Qual é a tensão de circuito aberto real?
+f) Explique por que as respostas para (d) e (e) não são iguais.
+
+**Solução:**
+
+**a) Faça um gráfico de $i_s$ versus $v_s$.**
+
+Para fazer o gráfico, plotamos os pontos da tabela com $v_s$ no eixo x e $i_s$ no eixo y.
+
+| $i_s$ (mA) | $v_s$ (V) | Ponto ($v_s, i_s$) |
+| :--------- | :-------- | :----------------- |
+| 20,0       | 0         | (0, 20.0)          |
+| 17,5       | 25        | (25, 17.5)         |
+| 15,0       | 50        | (50, 15.0)         |
+| 12,5       | 75        | (75, 12.5)         |
+| 9,0        | 100       | (100, 9.0)         |
+| 4,0        | 125       | (125, 4.0)         |
+| 0,0        | 140       | (140, 0.0)         |
+
+Ao plotar esses pontos, observa-se que os primeiros quatro pontos (de $v_s = 0 V$ a $v_s = 75 V$) formam uma linha reta. Os pontos seguintes (para $v_s > 75 V$) se desviam dessa linha, indicando um comportamento não linear fora do intervalo inicial.
+![graf](https://github.com/user-attachments/assets/b20feff1-dafe-4be4-9a49-0632be8c4446)
+
+**b) Construa um modelo de circuito dessa fonte de corrente que seja válido para $0 \le v_s \le 75 V$, com base na equação da reta representada no gráfico em (a).**
+
+Para o intervalo $0 \le v_s \le 75 V$, a relação entre $i_s$ e $v_s$ é linear. Um modelo para uma fonte real de corrente é uma fonte ideal de corrente em paralelo com um resistor (equivalente de Norton). A equação de uma linha reta é $i_s = m v_s + b$.
+
+**1. Encontrando a inclinação (m):**
+A inclinação representa o inverso da resistência em paralelo ($R_N$), ou seja, a condutância ($G_N$). Usando os pontos (0 V, 20.0 mA) e (75 V, 12.5 mA):
+$m = \frac{\Delta i_s}{\Delta v_s} = \frac{12.5 mA - 20.0 mA}{75 V - 0 V} = \frac{-7.5 mA}{75 V} = -0.1 mA/V = -0.1 \times 10^{-3} A/V$.
+A resistência em paralelo é $R_N = \frac{1}{|m|} = \frac{1}{0.1 \times 10^{-3}} = 10 \times 10^3 \Omega = 10 k\Omega$.
+
+**2. Encontrando a interceptação no eixo y (b):**
+A interceptação no eixo y é o valor de $i_s$ quando $v_s = 0 V$. Pela tabela, quando $v_s = 0 V$, $i_s = 20.0 mA$.
+Portanto, $b = 20.0 mA$. Esta é a corrente da fonte ideal de corrente ($I_N$).
+
+**Modelo de Circuito (Equivalente de Norton):**
+O dispositivo pode ser modelado como uma fonte ideal de corrente de **20.0 mA** em paralelo com um resistor de **10 kΩ**. A direção da fonte de corrente deve ser tal que a corrente flua para fora do terminal positivo de $v_s$.
+
+**c) Use seu modelo de circuito para prever a corrente fornecida a um resistor de 2,5 kΩ.**
+
+Conectamos um resistor de 2,5 kΩ em paralelo com o modelo de Norton. Usamos o divisor de corrente:
+$I_{2.5k\Omega} = I_N \times \frac{R_N}{R_N + R_{carga}}$
+$I_{2.5k\Omega} = 20.0 mA \times \frac{10 k\Omega}{10 k\Omega + 2.5 k\Omega}$
+$I_{2.5k\Omega} = 20.0 mA \times \frac{10}{12.5} = 20.0 mA \times 0.8$
+$I_{2.5k\Omega} = 16.0 mA$.
+
+**d) Use seu modelo de circuito para prever a tensão de circuito aberto da fonte de corrente.**
+
+A tensão de circuito aberto ($V_{CA}$) é a tensão nos terminais do modelo quando a corrente de saída é zero ($i_s = 0$). No modelo de Norton, toda a corrente da fonte ($I_N$) passa pelo resistor em paralelo ($R_N$).
+$V_{CA} = I_N \times R_N$
+$V_{CA} = 20.0 mA \times 10 k\Omega = (20.0 \times 10^{-3} A) \times (10 \times 10^3 \Omega)$
+$V_{CA} = 200 V$.
+
+**e) Qual é a tensão de circuito aberto real?**
+
+A tensão de circuito aberto real é o valor de $v_s$ quando $i_s = 0.0 mA$ na tabela fornecida.
+Pela tabela, quando $i_s = 0.0 mA$, $v_s = 140 V$.
+Portanto, a tensão de circuito aberto real é $140 V$.
+
+**f) Explique por que as respostas para (d) e (e) não são iguais.**
+
+As respostas para (d) e (e) não são iguais porque o modelo de circuito construído na parte (b) é válido apenas para o intervalo $0 \le v_s \le 75 V$. O modelo é baseado na suposição de uma relação linear entre $i_s$ e $v_s$ nesse intervalo. No entanto, a tabela mostra que a relação entre $i_s$ e $v_s$ não é linear para todo o intervalo de valores. A tensão de circuito aberto real (140 V) está fora do intervalo de validade do modelo linear, onde o comportamento do dispositivo não é mais linear.
+
+**Respostas:**
+a) O gráfico de $i_s$ versus $v_s$ mostra uma relação linear para $0 \le v_s \le 75 V$ e não linear para $v_s > 75 V$.
+b) O modelo de circuito válido para $0 \le v_s \le 75 V$ é uma fonte ideal de corrente de 20.0 mA em paralelo com um resistor de 10 kΩ.
+c) A corrente fornecida a um resistor de 2,5 kΩ é 16.0 mA.
+d) A tensão de circuito aberto prevista pelo modelo é 200 V.
+e) A tensão de circuito aberto real é 140 V.
+f) As respostas para (d) e (e) não são iguais porque o modelo de circuito construído na parte (b) é válido apenas para o intervalo $0 \le v_s \le 75 V$. A tensão de circuito aberto real (140 V) está fora do intervalo de validade do modelo linear, onde o comportamento do dispositivo não é mais linear.
+
+
+#Problema 2.31:
+a) Faça um gráfico de $v_s$ versus $i_s$.
+b) Construa um modelo de circuito da fonte real que seja válido para $0 \le i_s \le 24 mA$, com base na equação da reta representada no gráfico em (a). (Use uma fonte ideal de tensão em série com um resistor ideal.)
+c) Use seu modelo de circuito para prever a corrente fornecida a um resistor de 1 kΩ conectado aos terminais de sua fonte real.
+d) Use seu modelo de circuito para prever a corrente fornecida a um curto-circuito nos terminais da fonte real.
+e) Qual é a corrente de curto-circuito real?
+f) Explique por que as respostas para (d) e (e) não são iguais.
+
+**Solução:**
+
+**a) Faça um gráfico de $v_s$ versus $i_s$.**
+
+Para fazer o gráfico, plotamos os pontos da tabela com $i_s$ no eixo x e $v_s$ no eixo y.
+
+| $v_s$ (V) | $i_s$ (mA) | Ponto ($i_s, v_s$) |
+| :-------- | :--------- | :----------------- |
+| 24        | 0          | (0, 24)            |
+| 22        | 8          | (8, 22)            |
+| 20        | 16         | (16, 20)           |
+| 18        | 24         | (24, 18)           |
+| 15        | 32         | (32, 15)           |
+| 10        | 40         | (40, 10)           |
+| 0         | 48         | (48, 0)            |
+
+Ao plotar esses pontos, observa-se que os primeiros quatro pontos (de $i_s = 0 mA$ a $i_s = 24 mA$) formam uma linha reta. Os pontos seguintes (para $i_s > 24 mA$) se desviam dessa linha, indicando um comportamento não linear fora do intervalo inicial.
+
+![gra2](https://github.com/user-attachments/assets/c37d6055-e11f-4b2d-a46e-f0c4288ba6e5)
+
+**b) Construa um modelo de circuito da fonte real que seja válido para $0 \le i_s \le 24 mA$, com base na equação da reta representada no gráfico em (a). (Use uma fonte ideal de tensão em série com um resistor ideal.)**
+
+Para o intervalo $0 \le i_s \le 24 mA$, a relação entre $v_s$ e $i_s$ é linear. Um modelo para uma fonte real de tensão é uma fonte ideal de tensão em série com um resistor (equivalente de Thévenin). A equação de uma linha reta é $v_s = m i_s + b$.
+
+**1. Encontrando a inclinação (m):**
+A inclinação representa a resistência em série ($R_{Th}$). Usando os pontos (0 mA, 24 V) e (24 mA, 18 V):
+$m = \frac{\Delta v_s}{\Delta i_s} = \frac{18 V - 24 V}{24 mA - 0 mA} = \frac{-6 V}{24 mA} = -0.25 V/mA = -0.25 \times 10^3 \Omega = -250 \Omega$.
+A resistência de Thévenin é $R_{Th} = |m| = 250 \Omega$.
+
+**2. Encontrando a interceptação no eixo y (b):**
+A interceptação no eixo y é o valor de $v_s$ quando $i_s = 0 mA$.
+Pela tabela, quando $i_s = 0 mA$, $v_s = 24 V$.
+Portanto, $b = 24 V$. Esta é a tensão da fonte ideal de tensão ($V_{Th}$).
+
+**Modelo de Circuito (Equivalente de Thévenin):**
+O dispositivo pode ser modelado como uma fonte ideal de tensão de **24 V** em série com um resistor de **250 Ω**. A polaridade da fonte de tensão deve ser tal que o terminal positivo esteja no mesmo lado do terminal positivo de $v_s$.
+
+**c) Use seu modelo de circuito para prever a corrente fornecida a um resistor de 1 kΩ conectado aos terminais de sua fonte real.**
+
+Conectamos um resistor de 1 kΩ (1000 Ω) em série com o modelo de Thévenin.
+A corrente total no circuito ($i_s$) será:
+$i_s = \frac{V_{Th}}{R_{Th} + R_{carga}}$
+$i_s = \frac{24 V}{250 \Omega + 1000 \Omega} = \frac{24 V}{1250 \Omega}$
+$i_s = 0.0192 A = 19.2 mA$.
+
+**d) Use seu modelo de circuito para prever a corrente fornecida a um curto-circuito nos terminais da fonte real.**
+
+A corrente de curto-circuito ($I_{CC}$) é a corrente que flui quando $v_s = 0 V$. No modelo de Thévenin, isso ocorre quando os terminais de saída são curto-circuitados.
+$I_{CC} = \frac{V_{Th}}{R_{Th}}$
+$I_{CC} = \frac{24 V}{250 \Omega}$
+$I_{CC} = 0.096 A = 96 mA$.
+
+**e) Qual é a corrente de curto-circuito real?**
+
+A corrente de curto-circuito real é o valor de $i_s$ quando $v_s = 0 V$ na tabela fornecida.
+Pela tabela, quando $v_s = 0 V$, $i_s = 48 mA$.
+Portanto, a corrente de curto-circuito real é $48 mA$.
+
+**f) Explique por que as respostas para (d) e (e) não são iguais.**
+
+As respostas para (d) e (e) não são iguais porque o modelo de circuito construído na parte (b) é válido apenas para o intervalo $0 \le i_s \le 24 mA$. A corrente de curto-circuito real (48 mA) está fora do intervalo de validade do modelo linear. O modelo linear não prevê com precisão o comportamento do dispositivo fora do intervalo para o qual foi projetado, onde o comportamento do dispositivo não é mais linear.
+
+**Respostas:**
+a) O gráfico de $v_s$ versus $i_s$ mostra uma relação linear para $0 \le i_s \le 24 mA$ e não linear para $i_s > 24 mA$.
+b) O modelo de circuito válido para $0 \le i_s \le 24 mA$ é uma fonte ideal de tensão de 24 V em série com um resistor de 250 Ω.
+c) A corrente fornecida a um resistor de 1 kΩ é 19.2 mA.
+d) A corrente de curto-circuito prevista pelo modelo é 96 mA.
+e) A corrente de curto-circuito real é 48 mA.
+f) As respostas para (d) e (e) não são iguais porque o modelo de circuito construído na parte (b) é válido apenas para o intervalo $0 \le i_s \le 24 mA$. A corrente de curto-circuito real (48 mA) está fora do intervalo de validade do modelo linear, onde o comportamento do dispositivo não é mais linear.
+
+Obrigado pela imagem do circuito e pelos cálculos para o Problema 2.33!
+
+#Problema 2.33:
+
+**Solução:**
+
+Vamos seguir os passos fornecidos e depois calcular a potência total absorvida.
+
+**1. Calcular a tensão $v_x$ usando o método de divisão de tensão:**
+
+O circuito à esquerda da fonte dependente é um divisor de tensão simples. A tensão $v_x$ é a tensão sobre o resistor de 150 Ω.
+
+$v_x = v_g \times \frac{150 \Omega}{150 \Omega + 450 \Omega}$
+$v_x = 20 V \times \frac{150 \Omega}{600 \Omega}$
+$v_x = 20 V \times \frac{1}{4}$
+$v_x = 5 V$
+
+Este cálculo está correto e coincide com o seu material.
+
+**2. Determinar a corrente da fonte de corrente dependente, $i_x$:**
+
+A fonte de corrente dependente é $\frac{v_x}{100}$.
+$i_x = \frac{v_x}{100}$
+$i_x = \frac{5 V}{100}$
+$i_x = 0.05 A = 50 mA$
+
+Este cálculo também está correto e coincide com o seu material.
+
+**3. Aplicar a Lei de Ohm no resistor de 300 Ω para encontrar $v_o$:**
+
+A fonte de corrente $i_x$ está em paralelo com o resistor de 300 Ω. A tensão $v_o$ é a tensão sobre o resistor de 300 Ω. A corrente $i_x$ flui para baixo através do resistor de 300 Ω, o que é consistente com a polaridade de $v_o$ (positivo em cima, negativo em baixo).
+
+$v_o = i_x \times 300 \Omega$
+$v_o = 0.05 A \times 300 \Omega$
+$v_o = 15 V$
+
+Este cálculo está correto e coincide com o seu material.
+
+**4. Calcular a potência total absorvida no circuito:**
+
+A potência total absorvida no circuito é a soma das potências absorvidas por todos os elementos passivos (resistores). Pelo princípio da conservação de energia, a potência total fornecida pelas fontes deve ser igual à potência total absorvida pelos elementos do circuito.
+
+Vamos calcular a potência absorvida por cada resistor:
+
+*   **Potência absorvida pelo resistor de 450 Ω ($P_{450\Omega}$):**
+    A corrente que flui através do resistor de 450 Ω é a mesma que flui através do resistor de 150 Ω, que é a corrente fornecida pela fonte de 20 V.
+    $I_{450\Omega} = \frac{20 V}{450 \Omega + 150 \Omega} = \frac{20 V}{600 \Omega} = \frac{1}{30} A$
+    $P_{450\Omega} = I_{450\Omega}^2 \times 450 \Omega = \left(\frac{1}{30} A\right)^2 \times 450 \Omega = \frac{1}{900} \times 450 = 0.5 W$
+
+*   **Potência absorvida pelo resistor de 150 Ω ($P_{150\Omega}$):**
+    $P_{150\Omega} = I_{150\Omega}^2 \times 150 \Omega = \left(\frac{1}{30} A\right)^2 \times 150 \Omega = \frac{1}{900} \times 150 = \frac{1}{6} W \approx 0.1667 W$
+    Alternativamente, $P_{150\Omega} = \frac{v_x^2}{150 \Omega} = \frac{(5V)^2}{150 \Omega} = \frac{25}{150} = \frac{1}{6} W \approx 0.1667 W$
+
+*   **Potência absorvida pelo resistor de 300 Ω ($P_{300\Omega}$):**
+    $P_{300\Omega} = \frac{v_o^2}{300 \Omega} = \frac{(15 V)^2}{300 \Omega} = \frac{225}{300} = 0.75 W$
+    Alternativamente, $P_{300\Omega} = i_x^2 \times 300 \Omega = (0.05 A)^2 \times 300 \Omega = 0.0025 \times 300 = 0.75 W$
+
+**Potência Total Absorvida pelos Resistores:**
+$P_{total\_absorvida\_resistores} = P_{450\Omega} + P_{150\Omega} + P_{300\Omega}$
+$P_{total\_absorvida\_resistores} = 0.5 W + \frac{1}{6} W + 0.75 W = \frac{1}{2} + \frac{1}{6} + \frac{3}{4} = \frac{6}{12} + \frac{2}{12} + \frac{9}{12} = \frac{17}{12} W \approx 1.4167 W$
+
+**Verificação do Balanço de Potência (Potência Fornecida = Potência Absorvida):**
+
+*   **Potência fornecida pela fonte de tensão de 20 V ($P_{20V}$):**
+    A corrente que sai do terminal positivo da fonte de 20 V é $I_{450\Omega} = \frac{1}{30} A$. Como a corrente sai do terminal positivo, a fonte está **fornecendo** potência.
+    $P_{20V} = V \times I = 20 V \times \frac{1}{30} A = \frac{2}{3} W \approx 0.6667 W$ (fornecida)
+
+*   **Potência fornecida pela fonte de corrente dependente ($P_{dependente}$):**
+    A tensão sobre a fonte de corrente dependente é $v_o = 15 V$. A corrente $i_x = 0.05 A$ flui na mesma direção da queda de tensão (de cima para baixo, positivo em cima). Portanto, a fonte de corrente dependente está **fornecendo** potência.
+    $P_{dependente} = v_o \times i_x = 15 V \times 0.05 A = 0.75 W$ (fornecida)
+
+**Potência Total Fornecida:**
+$P_{total\_fornecida} = P_{20V} + P_{dependente} = \frac{2}{3} W + 0.75 W = 0.6667 W + 0.75 W = 1.4167 W$
+
+Como $P_{total\_fornecida} \approx 1.4167 W$ e $P_{total\_absorvida\_resistores} \approx 1.4167 W$, o balanço de potência está correto.
+
+**Respostas Finais:**
+*   $v_o = 15 V$
+*   A potência total absorvida no circuito (pelos resistores) é $\frac{17}{12} W \approx 1.4167 W$.
