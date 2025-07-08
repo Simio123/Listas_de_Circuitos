@@ -1,6 +1,4 @@
-Para resolver este problema, vou usar as leis de Kirchhoff e a Lei de Ohm.
-
-# Problema 2.18: Dado o circuito mostrado na Figura P2.18, determine:
+# Problema 2.18:
 a) o valor de $i_a$
 b) o valor de $i_b$
 c) o valor de $v_o$
@@ -79,7 +77,7 @@ e) $P_{fonte} = 125 W$
 
 
 
-*Problema 2.23:* O resistor variável R no circuito da Figura P2.23 é ajustado até que $i_o$ seja igual a 10 mA. Determine o valor de R.
+# Problema 2.23:
 
 **Solução:**
 
@@ -150,7 +148,7 @@ $R = \frac{60 V}{0.03 A} = 2000 \Omega = 2 k\Omega$
 O valor de R é $2 k\Omega$.
 
 
-*Problema 2.24:* Para o circuito mostrado na Figura P2.24, determine (a) R e (b) a potência fornecida pela fonte de 240 V.
+# Problema 2.24:
 
 **Solução usando Análise de Malhas**
 
