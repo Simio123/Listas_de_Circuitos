@@ -66,7 +66,7 @@ $P_{fonte} = 50 V \times 2.5 A = 125 W$
 **Verificação (Potência total dissipada vs. Potência total fornecida):**
 A soma das potências dissipadas nos resistores deve ser igual à potência fornecida pela fonte.
 $P_{total\_dissipada} = P_{4\Omega} + P_{20\Omega} + P_{80\Omega} = 25 W + 80 W + 20 W = 125 W$
-Como $P_{total\_dissipada} = 125 W$ e $P_{fonte} = 125 W$, a solução está consistente.
+Como $P_{total\_dissipada} = 125 W$ e $P_{fonte} = 125 W$.
 
 **Respostas:**
 a) $i_a = 2 A$
@@ -81,14 +81,12 @@ e) $P_{fonte} = 125 W$
 
 **Solução:**
 
-Vamos usar a Lei de Ohm e as Leis de Kirchhoff para resolver este problema.
-
-Primeiro, vamos converter os valores de resistência de kΩ para Ω:
+Primeiro, converter os valores de resistência de kΩ para Ω:
 1.5 kΩ = 1500 Ω
 3 kΩ = 3000 Ω
 5 kΩ = 5000 Ω
 
-Sabemos que $i_o = 10 mA = 0.01 A$.
+Sabendo que $i_o = 10 mA = 0.01 A$.
 A corrente $i_o$ passa pelo resistor de 5 kΩ. Podemos encontrar a tensão através do resistor de 5 kΩ (vamos chamar de $V_{5k\Omega}$):
 $V_{5k\Omega} = i_o \times 5000 \Omega = 0.01 A \times 5000 \Omega = 50 V$
 
