@@ -359,7 +359,6 @@ $P_{fonte} = I^2 \times R_{eq} = (0.08 \text{ A})^2 \times 50 \, \Omega = 0.0064
 *   $P_{fonte} = V \times I = 10 \text{ V} \times (50 \times 10^{-3} \text{ A}) = 0.5 \text{ W} = 500 \text{ mW}$
 
 
-
 ## Problema 3.10
 
 **Problema 3.10:**
@@ -481,9 +480,10 @@ O valor da resistência de carga $R_L$ é **24 Ω**.
 
 ## Problema 3.15 Suponha que o divisor de tensão da Figura P3.14 tenha sido construído com resistores de 1 W. Qual é o menor valor do Apêndice H que pode ser usado como $R_L$ antes que um dos resistores do divisor esteja funcionando em seu limite de dissipação?
 
+![alt text](image-7.png)
+
 *(Assumindo $R_1 = 40 \, \Omega$ e $R_2 = 10 \, \Omega$ com base em problemas anteriores da seção).*
 
----
 
 **Análise e Estratégia**
 
