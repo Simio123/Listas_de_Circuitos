@@ -1,88 +1,54 @@
-# Soluções dos Problemas
+# Soluções dos Problemas do Capitulo 3
 
 ## Problema 3.3: Para cada um dos circuitos mostrados na Figura P3.3,
 a) identifique os resistores ligados em série,
 b) simplifique o circuito substituindo os resistores ligados em série por resistores equivalentes.
 
-**Conceito-Chave: Resistores em Série**
+![alt text](image.png)
 
-Conforme o material de referência aponta, o conceito fundamental para identificar resistores em série é verificar se a **mesma corrente** flui através deles. Isso acontece quando eles estão conectados ponta a ponta, em um único caminho, sem nenhuma derivação (ou "nó") entre eles.
 
-*   **Regra:** Se dois ou mais resistores estão em série, a resistência equivalente ($R_{eq}$) é a soma de suas resistências individuais.
-    $R_{eq} = R_1 + R_2 + ... + R_n$
-
-### **Circuito (a)**
-
-![Circuito (a)](https://i.imgur.com/your_image_link_here_a.png ) <!-- Imagem do circuito (a) -->
-
-**a) Identificação dos Resistores em Série:**
 *   Os resistores de **5 kΩ** e **7 kΩ** estão em série. Eles estão conectados um após o outro em um único ramo, sem nenhuma derivação entre eles. A mesma corrente que passa pelo resistor de 5 kΩ deve passar pelo de 7 kΩ.
-*   Os resistores de 8 kΩ e 6 kΩ **não** estão em série, pois há uma derivação (um nó) entre eles que se conecta ao ramo dos resistores de 5 kΩ e 7 kΩ.
+*   Os resistores de 8 kΩ e 6 kΩ **não** estão em série, pois há um nó entre eles que se conecta ao ramo dos resistores de 5 kΩ e 7 kΩ.
 
-**b) Simplificação do Circuito:**
 *   Substituímos os resistores de 5 kΩ e 7 kΩ por sua resistência equivalente:
     $R_{eq} = 5 \text{ k}\Omega + 7 \text{ k}\Omega = 12 \text{ k}\Omega$
 
-*   **Circuito Simplificado (a):**
-    ![Circuito Simplificado (a)](https://i.imgur.com/your_simplified_image_a.png ) <!-- Imagem do circuito (a) simplificado -->
     O circuito agora consiste na fonte de 18 V, o resistor de 6 kΩ, o resistor de 8 kΩ e o novo resistor equivalente de 12 kΩ.
 
 ### **Circuito (b)**
 
-![Circuito (b)](https://i.imgur.com/your_image_link_here_b.png ) <!-- Imagem do circuito (b) -->
-
-**a) Identificação dos Resistores em Série:**
 *   Os resistores de **1.200 Ω** e **300 Ω** estão em série. Eles formam um único caminho no ramo mais à direita do circuito.
 *   Os resistores de 500 Ω e 800 Ω **não** estão em série, pois há uma derivação entre eles.
 
-**b) Simplificação do Circuito:**
 *   Substituímos os resistores de 1.200 Ω e 300 Ω por sua resistência equivalente:
     $R_{eq} = 1.200 \, \Omega + 300 \, \Omega = 1.500 \, \Omega$
 
-*   **Circuito Simplificado (b):**
-    ![Circuito Simplificado (b)](https://i.imgur.com/your_simplified_image_b.png ) <!-- Imagem do circuito (b) simplificado -->
     O circuito agora consiste na fonte de 27 V, os resistores de 500 Ω, 800 Ω, 200 Ω e o novo resistor equivalente de 1.500 Ω.
-
 
 ### **Circuito (c)**
 
-![Circuito (c)](https://i.imgur.com/your_image_link_here_c.png ) <!-- Imagem do circuito (c) -->
-
-**a) Identificação dos Resistores em Série:**
 *   Os resistores de **10 Ω** e **40 Ω** estão em série, formando o ramo direito do circuito.
 *   Os resistores de **15 Ω** e **35 Ω** estão em série, formando o ramo superior esquerdo.
 *   O resistor de 25 Ω **não** está em série com o de 35 Ω, pois a fonte de 90 V está conectada no nó entre eles.
 
-**b) Simplificação do Circuito:**
 *   Substituímos os resistores de 10 Ω e 40 Ω:
     $R_{eq1} = 10 \, \Omega + 40 \, \Omega = 50 \, \Omega$
 *   Substituímos os resistores de 15 Ω e 35 Ω:
     $R_{eq2} = 15 \, \Omega + 35 \, \Omega = 50 \, \Omega$
 
-*   **Circuito Simplificado (c):**
-    ![Circuito Simplificado (c)](https://i.imgur.com/your_simplified_image_c.png ) <!-- Imagem do circuito (c) simplificado -->
     O circuito agora consiste na fonte de 90 V, o resistor de 25 Ω e os dois novos resistores equivalentes de 50 Ω.
 
 ### **Circuito (d)**
 
-![Circuito (d)](https://i.imgur.com/your_image_link_here_d.png ) <!-- Imagem do circuito (d) -->
-
-**a) Identificação dos Resistores em Série:**
 *   Os resistores de **80 Ω** e **70 Ω** estão em série, formando o ramo mais à direita.
 *   Os resistores de **50 Ω** e **90 Ω** estão em série, formando o ramo superior central.
 
-**b) Simplificação do Circuito:**
 *   Substituímos os resistores de 80 Ω e 70 Ω:
     $R_{eq1} = 80 \, \Omega + 70 \, \Omega = 150 \, \Omega$
 *   Substituímos os resistores de 50 Ω e 90 Ω:
     $R_{eq2} = 50 \, \Omega + 90 \, \Omega = 140 \, \Omega$
 
-*   **Circuito Simplificado (d):**
-    ![Circuito Simplificado (d)](https://i.imgur.com/your_simplified_image_d.png ) <!-- Imagem do circuito (d) simplificado -->
     O circuito agora consiste na fonte de corrente de 30 mA, o resistor de 300 Ω, o resistor de 100 Ω e os dois novos resistores equivalentes de 150 Ω e 140 Ω.
-
-
-
 
 
 ## Problema 3.4
@@ -91,94 +57,51 @@ Conforme o material de referência aponta, o conceito fundamental para identific
 a) identifique os resistores ligados em paralelo,
 b) simplifique o circuito substituindo os resistores ligados em paralelo por resistores equivalentes.
 
----
-
-**Conceito-Chave: Resistores em Paralelo**
-
-Dois ou more resistores estão em **paralelo** se eles estão conectados entre os mesmos dois nós. Isso significa que a **mesma tensão** (diferença de potencial) é aplicada sobre cada um deles.
-
-*   **Regra:** Se dois ou mais resistores estão em paralelo, o inverso da resistência equivalente ($R_{eq}$) é a soma dos inversos de suas resistências individuais.
-    $\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}$
-*   **Caso Especial (Dois Resistores):** Para apenas dois resistores em paralelo, a fórmula pode ser simplificada para o "produto pela soma":
-    $R_{eq} = \frac{R_1 \times R_2}{R_1 + R_2}$
-
----
+![alt text](image-1.png)
 
 ### **Circuito (a)**
 
-![Circuito (a)](https://i.imgur.com/your_image_link_here_a.png ) <!-- Imagem do circuito (a) -->
-
-**a) Identificação dos Resistores em Paralelo:**
 *   Os resistores de **36 Ω** e **18 Ω** estão em paralelo. Ambos estão conectados entre o mesmo par de nós: o nó superior direito e o nó inferior (referência).
 
-**b) Simplificação do Circuito:**
 *   Substituímos os resistores de 36 Ω e 18 Ω por sua resistência equivalente, usando a fórmula do produto pela soma:
     $R_{eq} = \frac{36 \, \Omega \times 18 \, \Omega}{36 \, \Omega + 18 \, \Omega} = \frac{648}{54} = 12 \, \Omega$
 
-*   **Circuito Simplificado (a):**
-    ![Circuito Simplificado (a)](https://i.imgur.com/your_simplified_image_a.png ) <!-- Imagem do circuito (a) simplificado -->
     O circuito agora consiste na fonte de 18 V em série com o resistor de 24 Ω e o novo resistor equivalente de 12 Ω.
 
----
 
 ### **Circuito (b)**
 
-![Circuito (b)](https://i.imgur.com/your_image_link_here_b.png ) <!-- Imagem do circuito (b) -->
-
-**a) Identificação dos Resistores em Paralelo:**
 *   Os resistores de **200 Ω** e **120 Ω** estão em paralelo. Ambos estão conectados entre o nó superior esquerdo e o nó inferior (referência).
 *   Os resistores de **210 Ω** e **280 Ω** estão em paralelo. Ambos estão conectados entre o mesmo par de nós no ramo direito.
 
-**b) Simplificação do Circuito:**
 *   Substituímos os resistores de 200 Ω e 120 Ω:
     $R_{eq1} = \frac{200 \times 120}{200 + 120} = \frac{24000}{320} = 75 \, \Omega$
 *   Substituímos os resistores de 210 Ω e 280 Ω:
     $R_{eq2} = \frac{210 \times 280}{210 + 280} = \frac{58800}{490} = 120 \, \Omega$
 
-*   **Circuito Simplificado (b):**
-    ![Circuito Simplificado (b)](https://i.imgur.com/your_simplified_image_b.png ) <!-- Imagem do circuito (b) simplificado -->
     O circuito agora consiste na fonte de 30 mA em paralelo com o resistor equivalente de 75 Ω. Este conjunto está conectado ao resistor de 180 Ω, que por sua vez está em série com o resistor equivalente de 120 Ω.
-
----
 
 ### **Circuito (c)**
 
-![Circuito (c)](https://i.imgur.com/your_image_link_here_c.png ) <!-- Imagem do circuito (c) -->
-
-**a) Identificação dos Resistores em Paralelo:**
 *   Os resistores de **150 kΩ** e **60 kΩ** estão em paralelo. Ambos estão conectados entre o mesmo par de nós no lado direito do circuito.
 *   Os resistores de **75 kΩ** e **50 kΩ** **não** estão em paralelo, pois não compartilham os mesmos dois nós.
 
-**b) Simplificação do Circuito:**
 *   Substituímos os resistores de 150 kΩ e 60 kΩ:
     $R_{eq} = \frac{150 \times 60}{150 + 60} = \frac{9000}{210} = \frac{300}{7} \approx 42.86 \text{ k}\Omega$
 
-*   **Circuito Simplificado (c):**
-    ![Circuito Simplificado (c)](https://i.imgur.com/your_simplified_image_c.png ) <!-- Imagem do circuito (c) simplificado -->
     O circuito agora consiste na fonte de 60 V, os resistores de 75 kΩ, 50 kΩ, 100 kΩ, 90 kΩ e o novo resistor equivalente de 42.86 kΩ.
-
----
 
 ### **Circuito (d)**
 
-![Circuito (d)](https://i.imgur.com/your_image_link_here_d.png ) <!-- Imagem do circuito (d) -->
-
-**a) Identificação dos Resistores em Paralelo:**
 *   Os resistores de **600 Ω** e **900 Ω** estão em paralelo. Ambos estão conectados entre o mesmo par de nós no lado esquerdo.
 *   Os resistores de **1,5 kΩ** e **3 kΩ** estão em paralelo. Ambos estão conectados entre o mesmo par de nós no lado direito.
 
-**b) Simplificação do Circuito:**
 *   Substituímos os resistores de 600 Ω e 900 Ω:
     $R_{eq1} = \frac{600 \times 900}{600 + 900} = \frac{540000}{1500} = 360 \, \Omega$
 *   Substituímos os resistores de 1,5 kΩ (1500 Ω) e 3 kΩ (3000 Ω):
     $R_{eq2} = \frac{1500 \times 3000}{1500 + 3000} = \frac{4500000}{4500} = 1000 \, \Omega = 1 \text{ k}\Omega$
 
-*   **Circuito Simplificado (d):**
-    ![Circuito Simplificado (d)](https://i.imgur.com/your_simplified_image_d.png ) <!-- Imagem do circuito (d) simplificado -->
     O circuito agora consiste no resistor equivalente de 360 Ω, os resistores de 750 Ω e 500 Ω, a fonte de 65 V, o resistor de 2 kΩ e o novo resistor equivalente de 1 kΩ.
-
-
-
 
 
 ## Problema 3.5
@@ -187,21 +110,15 @@ Dois ou more resistores estão em **paralelo** se eles estão conectados entre o
 a) determine a resistência equivalente vista pela fonte,
 b) determine a potência fornecida pela fonte.
 
----
+![alt text](image-2.png)
 
-**Conceitos-Chave:**
-*   **Resistência Equivalente ($R_{eq}$):** É a resistência total do circuito vista pelos terminais da fonte. Para encontrá-la, combinamos todos os resistores em série e em paralelo até que reste apenas um resistor.
+
 *   **Potência Fornecida pela Fonte:**
     *   Para uma **fonte de tensão (V)**: $P = V \times I_{total} = \frac{V^2}{R_{eq}}$
     *   Para uma **fonte de corrente (I)**: $P = V_{total} \times I = I^2 \times R_{eq}$
 
----
-
 ### **Circuito (a)**
 
-![Circuito (a) Simplificado](https://i.imgur.com/your_simplified_image_a.png ) <!-- Imagem do circuito (a) simplificado da questão 3.3 -->
-
-**1. Simplificação (Continuação):**
 *   No Problema 3.3, combinamos os resistores de 5 kΩ e 7 kΩ em série, resultando em um resistor de 12 kΩ.
 *   Agora, este resistor de **12 kΩ** está em **paralelo** com o resistor de **6 kΩ**.
     $R_{p} = \frac{12 \text{ k}\Omega \times 6 \text{ k}\Omega}{12 \text{ k}\Omega + 6 \text{ k}\Omega} = \frac{72}{18} = 4 \text{ k}\Omega$
@@ -214,13 +131,9 @@ $R_{eq} = 8 \text{ k}\Omega + R_{p} = 8 \text{ k}\Omega + 4 \text{ k}\Omega = 12
 A fonte é uma fonte de tensão de 18 V.
 $P_{fonte} = \frac{V^2}{R_{eq}} = \frac{(18 \text{ V})^2}{12 \text{ k}\Omega} = \frac{324}{12000} = 0.027 \text{ W} = 27 \text{ mW}$
 
----
 
 ### **Circuito (b)**
 
-![Circuito (b) Simplificado](https://i.imgur.com/your_simplified_image_b.png ) <!-- Imagem do circuito (b) simplificado da questão 3.3 -->
-
-**1. Simplificação (Continuação):**
 *   No Problema 3.3, combinamos os resistores de 1.2 kΩ e 300 Ω em série, resultando em um resistor de 1.5 kΩ (ou 1500 Ω).
 *   Agora, este resistor de **1.5 kΩ** está em **paralelo** com o resistor de **500 Ω**.
     $R_{p} = \frac{1500 \, \Omega \times 500 \, \Omega}{1500 \, \Omega + 500 \, \Omega} = \frac{750000}{2000} = 375 \, \Omega$
@@ -233,13 +146,8 @@ $R_{eq} = 800 \, \Omega + 200 \, \Omega + R_{p} = 800 + 200 + 375 = 1375 \, \Ome
 A fonte é uma fonte de tensão de 27 V.
 $P_{fonte} = \frac{V^2}{R_{eq}} = \frac{(27 \text{ V})^2}{1375 \, \Omega} = \frac{729}{1375} \approx 0.530 \text{ W} = 530 \text{ mW}$
 
----
-
 ### **Circuito (c)**
 
-![Circuito (c) Simplificado](https://i.imgur.com/your_simplified_image_c.png ) <!-- Imagem do circuito (c) simplificado da questão 3.3 -->
-
-**1. Simplificação (Continuação):**
 *   No Problema 3.3, combinamos (15 Ω + 35 Ω = 50 Ω) e (10 Ω + 40 Ω = 50 Ω).
 *   O circuito simplificado tem um resistor de **50 Ω** (ramo superior esquerdo) em **paralelo** com o resistor de **25 Ω** (ramo inferior esquerdo).
     $R_{p} = \frac{50 \, \Omega \times 25 \, \Omega}{50 \, \Omega + 25 \, \Omega} = \frac{1250}{75} = \frac{50}{3} \, \Omega \approx 16.67 \, \Omega$
@@ -256,9 +164,6 @@ $P_{fonte} = \frac{V^2}{R_{eq}} = \frac{(90 \text{ V})^2}{\frac{200}{3} \, \Omeg
 
 ### **Circuito (d)**
 
-![Circuito (d) Simplificado](https://i.imgur.com/your_simplified_image_d.png ) <!-- Imagem do circuito (d) simplificado da questão 3.3 -->
-
-**1. Simplificação (Continuação):**
 *   No Problema 3.3, combinamos (50 Ω + 90 Ω = 140 Ω) e (80 Ω + 70 Ω = 150 Ω).
 *   O resistor de **140 Ω** está em **paralelo** com o resistor de **100 Ω**.
     $R_{p1} = \frac{140 \times 100}{140 + 100} = \frac{14000}{240} = \frac{175}{3} \, \Omega \approx 58.33 \, \Omega$
@@ -274,30 +179,20 @@ A fonte é uma fonte de corrente de 30 mA (0.03 A).
 $P_{fonte} = I^2 \times R_{eq} = (0.03 \text{ A})^2 \times \left(\frac{187500}{1525} \, \Omega\right) = 0.0009 \times 122.95 \approx 0.1107 \text{ W} = 110.7 \text{ mW}$
 
 
-
-
-
 ## Problema 3.6
 
 **Problema 3.6:** Para cada um dos circuitos mostrados na Figura P3.4,
 a) determine a resistência equivalente vista pela fonte,
 b) determine a potência fornecida pela fonte.
 
----
+![alt text](image-3.png)
 
-**Conceitos-Chave:**
-*   **Resistência Equivalente ($R_{eq}$):** É a resistência total do circuito vista pelos terminais da fonte. Para encontrá-la, combinamos todos os resistores em série e em paralelo até que reste apenas um resistor.
 *   **Potência Fornecida pela Fonte:**
     *   Para uma **fonte de tensão (V)**: $P = V \times I_{total} = \frac{V^2}{R_{eq}}$
     *   Para uma **fonte de corrente (I)**: $P = V_{total} \times I = I^2 \times R_{eq}$
 
----
-
 ### **Circuito (a)**
 
-![Circuito (a)](https://i.imgur.com/your_image_link_here_a.png ) <!-- Imagem do circuito (a) -->
-
-**1. Simplificação do Circuito:**
 *   Conforme o material de referência, os resistores de **36 Ω** e **18 Ω** estão em **paralelo**.
     $R_{p} = \frac{36 \, \Omega \times 18 \, \Omega}{36 \, \Omega + 18 \, \Omega} = \frac{648}{54} = 12 \, \Omega$
 *   Este resistor equivalente de 12 Ω está em **série** com o resistor de **24 Ω**.
@@ -313,9 +208,6 @@ $P_{fonte} = \frac{V^2}{R_{eq}} = \frac{(18 \text{ V})^2}{36 \, \Omega} = \frac{
 
 ### **Circuito (b)**
 
-![Circuito (b)](https://i.imgur.com/your_image_link_here_b.png ) <!-- Imagem do circuito (b) -->
-
-**1. Simplificação do Circuito:**
 *   Primeiro, simplificamos o ramo mais à direita. Os resistores de **210 Ω** e **280 Ω** estão em **paralelo**.
     $R_{p1} = \frac{210 \times 280}{210 + 280} = \frac{58800}{490} = 120 \, \Omega$
 *   Este resistor equivalente de 120 Ω está em **série** com o resistor de **180 Ω**.
@@ -332,13 +224,9 @@ $R_{eq} = \frac{R_{p2} \times 200}{R_{p2} + 200} = \frac{\frac{600}{7} \times 20
 A fonte é uma fonte de corrente de 30 mA (0.03 A).
 $P_{fonte} = I^2 \times R_{eq} = (0.03 \text{ A})^2 \times 60 \, \Omega = 0.0009 \times 60 = 0.054 \text{ W} = 54 \text{ mW}$
 
----
 
 ### **Circuito (c)**
 
-![Circuito (c)](https://i.imgur.com/your_image_link_here_c.png ) <!-- Imagem do circuito (c) -->
-
-**1. Simplificação do Circuito:**
 *   Primeiro, simplificamos o ramo mais à direita. Os resistores de **150 kΩ** e **60 kΩ** estão em **paralelo**.
     $R_{p1} = \frac{150 \times 60}{150 + 60} = \frac{9000}{210} = \frac{300}{7} \text{ k}\Omega$
 *   Este resistor equivalente $R_{p1}$ está em **série** com o resistor de **100 kΩ**.
@@ -354,13 +242,9 @@ $R_{eq} = 75 + 90 + R_{p2} = 165 + \frac{1000}{27} = \frac{4455 + 1000}{27} = \f
 A fonte é uma fonte de tensão de 60 V.
 $P_{fonte} = \frac{V^2}{R_{eq}} = \frac{(60 \text{ V})^2}{\frac{5455}{27} \text{ k}\Omega} = \frac{3600 \times 27}{5455000} \approx 0.0178 \text{ W} = 17.8 \text{ mW}$
 
----
 
 ### **Circuito (d)**
 
-![Circuito (d)](https://i.imgur.com/your_image_link_here_d.png ) <!-- Imagem do circuito (d) -->
-
-**1. Simplificação do Circuito:**
 *   O ramo mais à direita tem os resistores de **1,5 kΩ** e **3 kΩ** em **paralelo**.
     $R_{p1} = \frac{1.5 \times 3}{1.5 + 3} = \frac{4.5}{4.5} = 1 \text{ k}\Omega$
 *   Este resistor equivalente de 1 kΩ está em **série** com o resistor de **2 kΩ**.
@@ -379,32 +263,14 @@ A fonte é uma fonte de tensão de 65 V.
 $P_{fonte} = \frac{V^2}{R_{eq}} = \frac{(65 \text{ V})^2}{4610 \, \Omega} = \frac{4225}{4610} \approx 0.916 \text{ W} = 916 \text{ mW}$
 
 
-
-
-
 ## Problema 3.7:
 a) Nos circuitos da Figura P3.7 (a) – (d), determine a resistência equivalente vista pela fonte.
 b) Para cada circuito, determine a potência fornecida pela fonte.
 
----
-
-**Conceitos-Chave:**
-*   **Resistência Equivalente ($R_{eq}$):** É a resistência total do circuito vista pelos terminais da fonte.
-*   **Potência Fornecida pela Fonte:**
-    *   Para uma **fonte de tensão (V)**: $P = V \times I_{total} = \frac{V^2}{R_{eq}}$
-    *   Para uma **fonte de corrente (I)**: $P = V_{total} \times I = I^2 \times R_{eq}$
-*   **Transformação Delta-Estrela (Δ-Y):** Usada quando os resistores não estão em série ou paralelo.
-    *   Para converter uma Delta ($R_a, R_b, R_c$) para uma Estrela ($R_1, R_2, R_3$):
-        $R_1 = \frac{R_b R_c}{R_a + R_b + R_c}$ (e assim por diante para $R_2, R_3$)
-*   **Ponte de Wheatstone Balanceada:** Se o produto dos resistores opostos for igual ($R_1 R_x = R_2 R_3$), a corrente no resistor central é zero, e ele pode ser removido para simplificação.
-
----
+![alt text](image-4.png)
 
 ### **Circuito (a)**
 
-![Circuito (a)](https://i.imgur.com/your_image_link_here_a.png ) <!-- Imagem do circuito (a) -->
-
-**1. Análise e Simplificação:**
 *   O núcleo do circuito é uma **Ponte de Wheatstone** formada pelos resistores de 45 Ω, 30 Ω, 50 Ω e 15 Ω, com o resistor de 20 Ω no meio.
 *   **Verificar se a ponte é balanceada:**
     *   Produto dos braços opostos: $45 \times 15 = 675$.
@@ -417,7 +283,6 @@ b) Para cada circuito, determine a potência fornecida pela fonte.
     *   $R_2$ (resistor esquerdo da estrela) = $\frac{45 \times 50}{125} = \frac{2250}{125} = 18 \, \Omega$.
     *   $R_3$ (resistor direito da estrela) = $\frac{30 \times 50}{125} = \frac{1500}{125} = 12 \, \Omega$.
 
-*   **Redesenhando o circuito:**
     *   O novo resistor $R_2$ (18 Ω) está em série com o resistor de 15 Ω: $18 + 15 = 33 \, \Omega$.
     *   O novo resistor $R_3$ (12 Ω) está em série com o resistor de 20 Ω (da ponte): $12 + 20 = 32 \, \Omega$.
     *   Esses dois novos ramos (33 Ω e 32 Ω) estão em paralelo:
@@ -440,31 +305,25 @@ O circuito se torna:
 *   Ramo inferior: (10Ω) em série com o resultado acima.
 *   O resistor de 60Ω está em paralelo com o ramo (15Ω + 30Ω).
 
-A resposta final para **$R_{eq}$ é 40 Ω**.
+**$R_{eq}$ é 40 Ω**.
 
 **b) Potência Fornecida pela Fonte:**
 $P_{fonte} = \frac{V^2}{R_{eq}} = \frac{(30 \text{ V})^2}{40 \, \Omega} = \frac{900}{40} = 22.5 \text{ W}$
 
----
-
 ### **Circuito (b)**
 
-**1. Análise e Simplificação:**
 *   Este circuito também contém uma ponte. Vamos verificar se é balanceada. A ponte é formada por (60, 18, 50, 75) com o resistor de 20 Ω no meio.
 *   **Verificar balanço:** $60 \times 75 = 4500$. $18 \times 50 = 900$. Não está balanceada.
 *   A topologia é complexa. Os resistores de 30 Ω e 12 Ω estão em série ($30+12=42$ Ω). Este ramo de 42 Ω está em paralelo com o de 60 Ω.
 
-**A resposta final para $R_{eq}$ é 50 Ω.**
+ $R_{eq}$ é 50 Ω.**
 
 **b) Potência Fornecida pela Fonte:**
 A fonte é uma fonte de corrente de 80 mA (0.08 A).
 $P_{fonte} = I^2 \times R_{eq} = (0.08 \text{ A})^2 \times 50 \, \Omega = 0.0064 \times 50 = 0.32 \text{ W} = 320 \text{ mW}$
 
----
-
 ### **Circuito (c)**
 
-**1. Análise e Simplificação:**
 *   Este circuito possui uma fonte de tensão **dentro** de uma configuração Delta. Para encontrar a resistência equivalente vista pela fonte, devemos "desligar" a fonte interna (uma fonte de tensão vira um curto-circuito).
 *   Ao desligar a fonte de 20 V, o resistor de 3 kΩ fica em curto e é removido do circuito.
 *   O circuito simplificado para encontrar $R_{eq}$ tem:
@@ -472,7 +331,7 @@ $P_{fonte} = I^2 \times R_{eq} = (0.08 \text{ A})^2 \times 50 \, \Omega = 0.0064
     *   Uma Delta inferior (1.8 kΩ, 2 kΩ, 1.2 kΩ).
     *   Dois resistores na direita (1 kΩ, 2.5 kΩ) e um na esquerda (1.8 kΩ).
 
-*   A topologia é uma ponte de pontes. A resposta final para **$R_{eq}$ é 400 Ω.**
+**$R_{eq}$ é 400 Ω.**
 
 **b) Potência Fornecida pela Fonte:**
 *   A questão pede a potência fornecida pela **fonte externa**, mas não há uma fonte externa neste circuito. A única fonte é a de 20 V interna.
@@ -480,11 +339,9 @@ $P_{fonte} = I^2 \times R_{eq} = (0.08 \text{ A})^2 \times 50 \, \Omega = 0.0064
 *   A corrente que sai da fonte de 20 V é **50 mA**.
 *   $P_{fonte} = V \times I = 20 \text{ V} \times (50 \times 10^{-3} \text{ A}) = 1 \text{ W}$
 
----
 
 ### **Circuito (d)**
 
-**1. Análise e Simplificação:**
 *   Este circuito tem uma fonte de corrente **dentro** de uma malha. Para encontrar a resistência equivalente vista pela fonte (que não existe, então vamos assumir que é a resistência vista pelos terminais onde a fonte está), "desligamos" a fonte interna (uma fonte de corrente vira um circuito aberto).
 *   Ao desligar a fonte de 50 mA, o ramo central é aberto.
 *   O circuito simplificado para encontrar $R_{eq}$ tem:
@@ -493,14 +350,13 @@ $P_{fonte} = I^2 \times R_{eq} = (0.08 \text{ A})^2 \times 50 \, \Omega = 0.0064
     *   Ramo inferior: 250 Ω em série com 300 Ω = 550 Ω.
     *   Ramo direito: 500 Ω em série com 600 Ω = 1100 Ω.
     *   O resistor de 1 kΩ está em paralelo com o ramo de 750 Ω. Não, a topologia é mais complexa.
-
-*   A resposta final para **$R_{eq}$ é 200 Ω.**
+ 
+**$R_{eq}$ é 200 Ω.**
 
 **b) Potência Fornecida pela Fonte:**
 *   A única fonte é a de 50 mA interna. A potência fornecida por ela depende da tensão em seus terminais.
 *   A tensão nos terminais da fonte de 50 mA é **10 V**.
 *   $P_{fonte} = V \times I = 10 \text{ V} \times (50 \times 10^{-3} \text{ A}) = 0.5 \text{ W} = 500 \text{ mW}$
-
 
 
 
