@@ -368,67 +368,42 @@ b) Determine uma expressão para a resistência equivalente de n resistores de v
 c) Usando os resultados de (a), projete uma rede resistiva com uma resistência equivalente de 3 kΩ usando dois resistores com o mesmo valor do Apêndice H.
 d) Usando os resultados de (b), projete uma rede resistiva com uma resistência equivalente de 4 kΩ usando um número mínimo de resistores idênticos do Apêndice H.
 
----
-
-**Conceito-Chave: Resistores em Série**
-
-Quando resistores são conectados em série, a resistência equivalente ($R_{eq}$) é a soma de suas resistências individuais.
-$R_{eq} = R_1 + R_2 + ... + R_n$
-
----
-
-### **Parte (a): Dois Resistores em Série**
-
-Conforme o material de referência, se temos dois resistores, ambos com resistência R, a resistência equivalente é:
+**Resposta (a):** 
+Se temos dois resistores, ambos com resistência R, a resistência equivalente é:
 $R_{eq} = R + R = 2R$
 
-**Resposta (a):** A expressão é **$R_{eq} = 2R$**.
+A expressão é **$R_{eq} = 2R$**.
 
----
-
-### **Parte (b): n Resistores em Série**
-
-Conforme o material de referência, se temos *n* resistores, todos com resistência R, a resistência equivalente é a soma de R, *n* vezes:
+**Resposta (b):** Se temos *n* resistores, todos com resistência R, a resistência equivalente é a soma de R, *n* vezes:
 $R_{eq} = \underbrace{R + R + ... + R}_{n \text{ vezes}} = n \times R$
+A expressão é **$R_{eq} = nR$**.
 
-**Resposta (b):** A expressão é **$R_{eq} = nR$**.
-
----
-
-### **Parte (c): Projeto de 3 kΩ com Dois Resistores Idênticos**
-
-**1. Análise:**
+**Resposta (c):**
 *   Queremos uma resistência equivalente de $R_{eq} = 3 \text{ k}\Omega$.
 *   Devemos usar dois resistores idênticos em série.
 *   Usando a fórmula da parte (a): $R_{eq} = 2R$.
 
-**2. Cálculo do Valor de R:**
 $3 \text{ k}\Omega = 2R$
 $R = \frac{3 \text{ k}\Omega}{2} = 1.5 \text{ k}\Omega$
 
-**3. Projeto (Seleção do Componente):**
 *   Precisamos encontrar um resistor com o valor de **1.5 kΩ** no Apêndice H.
 *   Olhando a tabela de valores padrão de resistores, o valor **1.5 kΩ** está disponível.
 
-**Resposta (c):** O projeto consiste em conectar **dois resistores de 1.5 kΩ em série**.
+O projeto consiste em conectar **dois resistores de 1.5 kΩ em série**.
 ($1.5 \text{ k}\Omega + 1.5 \text{ k}\Omega = 3 \text{ k}\Omega$)
 
----
 
-### **Parte (d): Projeto de 4 kΩ com Mínimo de Resistores Idênticos**
+**Resposta (d):**
 
-**1. Análise:**
 *   Queremos uma resistência equivalente de $R_{eq} = 4 \text{ k}\Omega$.
 *   Devemos usar um número mínimo (*n*) de resistores idênticos (R) do Apêndice H.
 *   Usando a fórmula da parte (b): $R_{eq} = nR$.
 
-**2. Estratégia:**
 Para minimizar o número de resistores (*n*), devemos maximizar o valor do resistor individual (R) que escolhemos do Apêndice H. A equação é:
 $4 \text{ k}\Omega = n \times R \implies n = \frac{4 \text{ k}\Omega}{R}$
 
 Para que *n* seja um número inteiro (já que não podemos usar uma fração de um resistor), o valor de $R$ deve ser um divisor de 4000.
 
-**3. Testando Divisores de 4000 que são Valores Padrão:**
 *   **Se R = 4 kΩ?** Não existe um resistor de 4 kΩ na tabela de valores padrão.
 *   **Se R = 2 kΩ?** O valor 2 kΩ não é um valor padrão comum (mas vamos supor que exista para fins de exemplo). Se usarmos R = 2 kΩ, precisaríamos de $n = \frac{4 \text{ k}\Omega}{2 \text{ k}\Omega} = 2$ resistores.
 *   **Se R = 1 kΩ?** O valor **1 kΩ** é um valor padrão muito comum e está no Apêndice H. Se usarmos R = 1 kΩ, precisaríamos de:
@@ -441,21 +416,14 @@ Para que *n* seja um número inteiro (já que não podemos usar uma fração de 
 
 A melhor escolha que utiliza um valor padrão do Apêndice H e minimiza o número de componentes é usar o maior divisor possível de 4000 que seja um valor padrão. O valor **1 kΩ** é a escolha ideal.
 
-**Resposta (d):** O projeto consiste em conectar **quatro resistores de 1 kΩ em série**.
+O projeto consiste em conectar **quatro resistores de 1 kΩ em série**.
 ($1 \text{ k}\Omega + 1 \text{ k}\Omega + 1 \text{ k}\Omega + 1 \text{ k}\Omega = 4 \text{ k}\Omega$)
-
-
-
 
 
 ## Problema 3.13 No circuito do divisor de tensão mostrado na Figura P3.13, o valor a vazio de $v_o$ é 4 V. Quando a resistência de carga $R_L$ é ligada aos terminais a e b, $v_o$ cai para 3 V. Determine $R_L$.
 
+![alt text](image-5.png)
 
-**Análise e Solução**
-
-Este problema deve ser resolvido em duas etapas. Primeiro, usamos a condição "a vazio" para encontrar o valor do resistor desconhecido $R_2$. Depois, usamos a condição "com carga" para encontrar o valor de $R_L$.
-
-**Etapa 1: Análise do Circuito "A Vazio" (Sem $R_L$)**
 
 "A vazio" significa que nada está conectado aos terminais *a* e *b*. Nessa situação, o circuito é um simples divisor de tensão com os resistores de 40 Ω e $R_2$ em série.
 
@@ -478,8 +446,6 @@ $8 = 0.8 R_2$
 $R_2 = \frac{8}{0.8} = 10 \, \Omega$
 
 Agora sabemos que o valor do resistor $R_2$ é **10 Ω**.
-
-**Etapa 2: Análise do Circuito "Com Carga" (Com $R_L$)**
 
 Quando a resistência de carga $R_L$ é conectada aos terminais *a* e *b*, ela fica em **paralelo** com o resistor $R_2$.
 
@@ -510,11 +476,7 @@ $70.59 = 10 R_L - 7.059 R_L$
 $70.59 = 2.941 R_L$
 $R_L = \frac{70.59}{2.941} \approx 24 \, \Omega$
 
-**Resposta Final:**
 O valor da resistência de carga $R_L$ é **24 Ω**.
-
-
-
 
 
 ## Problema 3.15 Suponha que o divisor de tensão da Figura P3.14 tenha sido construído com resistores de 1 W. Qual é o menor valor do Apêndice H que pode ser usado como $R_L$ antes que um dos resistores do divisor esteja funcionando em seu limite de dissipação?
