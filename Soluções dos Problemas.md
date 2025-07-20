@@ -267,7 +267,7 @@ $P_{fonte} = \frac{V^2}{R_{eq}} = \frac{(65 \text{ V})^2}{4610 \, \Omega} = \fra
 a) Nos circuitos da Figura P3.7 (a) – (d), determine a resistência equivalente vista pela fonte.
 b) Para cada circuito, determine a potência fornecida pela fonte.
 
-![alt text](image-4.png)
+![alt text](image-6.png)
 
 ### **Circuito (a)**
 
